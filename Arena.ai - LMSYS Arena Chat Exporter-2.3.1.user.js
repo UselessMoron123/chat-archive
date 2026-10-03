@@ -1327,6 +1327,15 @@
         const input = source.input !== undefined ? source.input : source.args;
         const output = source.output !== undefined ? source.output : source.result;
         if (!output || typeof output !== "object") return;
+        const outputStatus = String(output.status || "").toLowerCase();
+        if (
+          ["error", "failed", "failure"].includes(outputStatus) ||
+          Boolean(output.error)
+        ) {
+          lines.push(
+            "[notice: this tool call reported an error; see its recorded status/error fields]"
+          );
+        }
 
         if (sourceToolName === "fetch_page") {
           const chunkIndex = Number(output.chunkIndex ?? input?.chunkIndex);
