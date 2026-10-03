@@ -1,10 +1,8 @@
 // ==UserScript==
 // @name         Arena.ai / LMSYS Arena Chat Exporter
-// @name:zh-CN   Arena.ai / LMSYS Arena 聊天导出器
 // @namespace    http://tampermonkey.net/
-// @version      2.3
-// @description  Export arena.ai, lmarena.ai, and legacy LMSYS Arena chats (including Agent Mode) as JSON or detailed TXT with complete tool I/O, list selection, and ZIP packaging
-// @description:zh-CN  导出 arena.ai、lmarena.ai 与旧版 LMSYS Arena 聊天记录（含 Agent Mode），支持 JSON、TXT、列表勾选与 ZIP 打包
+// @version      2.3.1
+// @description  Export arena.ai, lmarena.ai, and legacy LMSYS Arena chats (including Agent Mode) as JSON or detailed TXT with recorded tool I/O, list selection, and ZIP packaging
 // @match        https://arena.ai/*
 // @match        https://*.arena.ai/*
 // @match        https://lmarena.ai/*
@@ -24,7 +22,7 @@
   const EVALUATION_ENDPOINT_PREFIX = "/api/evaluation/";
   const AGENT_PAGE_PREFIX = "/agent/";
   const CHAT_PAGE_PREFIX = "/c/";
-  const EXPORTER_VERSION = "2.3";
+  const EXPORTER_VERSION = "2.3.1";
   const DEFAULT_HISTORY_PAGE_SIZE = 20;
   const HISTORY_PAGE_GUARD = 200;
 
@@ -36,168 +34,75 @@
   const UUID_PATTERN =
     /([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/i;
 
-  const I18N = {
-    en: {
-      unknown_error: "Unknown error",
-      request_failed: "Request failed {status} {statusText}{suffix}",
-      invalid_session_id: "Invalid conversation identifier.",
-      unexpected_evaluation_shape: "The API did not return the expected conversation shape.",
-      unknown_export_format: "Unknown export format: {format}",
-      current_page_not_chat: "The current page is not a chat detail page.",
-      zip_lib_missing: "ZIP library is not loaded, ZIP packaging is unavailable.",
-      no_selected_items: "Select at least one conversation first.",
-      zip_generation_failed: "ZIP generation failed. Try fewer chats or switch export format.",
-      untitled: "(untitled)",
-      empty_message: "(empty)",
-      dock_primary: "Export",
-      dock_secondary: "Chat",
-      dock_aria_open: "Open chat export panel",
-      panel_title: "arena chat export",
-      close_aria: "Close",
-      section_current: "Current chat",
-      button_download_json: "Download JSON",
-      button_download_txt: "Download TXT",
-      section_history: "Conversation list",
-      button_fetch_history: "Fetch list",
-      helper_history: "The list starts empty. After loading, selected exports are packed into one ZIP with a manifest.",
-      button_select_all: "Select all",
-      button_select_agent: "Select agent",
-      button_clear_selection: "Clear",
-      selected_count: "{count} selected",
-      history_empty: "No conversations loaded yet",
-      button_export_selected_json: "Export selected JSON",
-      button_export_selected_txt: "Export selected TXT",
-      status_prefix: "Status: {message}",
-      status_ready: "Ready. Download the current chat or load the list for batch export.",
-      status_running: "{label}...",
-      status_done: "{label} completed.",
-      status_failed: "{label} failed: {message}",
-      label_fetch_history: "Loading list",
-      label_download_current: "Downloading current {format}",
-      label_export_selected: "Exporting selected {format}",
-      fetch_page_request: "Loading list... page {page}, loaded {count}",
-      fetch_page_loaded: "Loaded page {page}. Conversations: {count}",
-      fetch_complete: "Loaded {count} conversations.",
-      fetch_guard_hit:
-        "Loaded {count} conversations. The safety guard was hit; increase the guard if you still expect more.",
-      current_download_done: "Current chat was downloaded as {format}.",
-      zip_packing: "Packing {format} ZIP...",
-      zip_packing_progress: "Packing {format} ZIP... {percent}%",
-      batch_done_packaged_success_failed:
-        "Batch export finished. ZIP ready. Success: {success}. Failed: {failed}.",
-      batch_done_success_failed:
-        "Batch export finished. Success: {success}. Failed: {failed}.",
-      batch_done_packaged_success:
-        "Batch export finished. ZIP ready. Success: {success}.",
-      batch_done_success: "Batch export finished. Success: {success}.",
-      batch_done_manifest_only:
-        "All selected chat exports failed. A manifest-only ZIP was created (failed: {failed}).",
-      selected_all_done: "All loaded conversations are selected.",
-      selected_agent_done: "Selected {count} agent conversations.",
-      cleared_selection_done: "Selection cleared.",
-      gui_init_failed: "GUI initialization failed: missing required nodes.",
-      readonly_ui_comment:
-        "Only human-readable fields are shown in the list. Internal UUIDs stay hidden in the GUI.",
-      switched_language: "Language updated. Reloading...",
-      attach_summary_one: "{count} file attached",
-      attach_summary_many: "{count} files attached",
-      attachment_warning:
-        "Attachment files are not downloaded; included links may expire or require an active Arena session.",
-      attachment_warning_txt:
-        "Attachments: files are not downloaded; included links may expire or require an active Arena session.",
-      txt_title_fallback: "(untitled)",
-    },
-    "zh-CN": {
-      unknown_error: "未知错误",
-      request_failed: "请求失败 {status} {statusText}{suffix}",
-      invalid_session_id: "会话标识无效。",
-      unexpected_evaluation_shape: "接口返回不是预期的聊天详情结构。",
-      unknown_export_format: "未知导出格式：{format}",
-      current_page_not_chat: "当前页面不是聊天详情页，无法识别会话。",
-      zip_lib_missing: "ZIP 打包库未加载，无法生成 ZIP。",
-      no_selected_items: "请先勾选至少一条聊天记录。",
-      zip_generation_failed: "ZIP 生成失败。请尝试减少勾选数量，或切换导出格式。",
-      untitled: "(无标题)",
-      empty_message: "(empty)",
-      dock_primary: "导出",
-      dock_secondary: "聊天",
-      dock_aria_open: "打开聊天导出面板",
-      panel_title: "arena 聊天导出",
-      close_aria: "关闭",
-      section_current: "当前聊天",
-      button_download_json: "下载 JSON",
-      button_download_txt: "下载 TXT",
-      section_history: "聊天列表",
-      button_fetch_history: "抓取列表",
-      helper_history: "列表初始为空，抓取后可勾选导出；所选记录会打包成包含导出清单的 ZIP。",
-      button_select_all: "全选",
-      button_select_agent: "仅选 Agent",
-      button_clear_selection: "清空选择",
-      selected_count: "已选 {count} 条",
-      history_empty: "尚未抓取聊天列表",
-      button_export_selected_json: "导出勾选 JSON",
-      button_export_selected_txt: "导出勾选 TXT",
-      status_prefix: "状态：{message}",
-      status_ready: "就绪。可下载当前聊天，或先抓取列表后批量导出。",
-      status_running: "{label}执行中...",
-      status_done: "{label}完成。",
-      status_failed: "{label}失败：{message}",
-      label_fetch_history: "抓取列表",
-      label_download_current: "下载当前{format}",
-      label_export_selected: "导出勾选{format}",
-      fetch_page_request: "正在抓取第 {page} 页，当前已拿到 {count} 条",
-      fetch_page_loaded: "已抓取到第 {page} 页，当前共 {count} 条",
-      fetch_complete: "抓取完成，共 {count} 条。",
-      fetch_guard_hit: "抓取完成，当前已拿到 {count} 条；若你仍怀疑没抓全，再把安全上限继续调大。",
-      current_download_done: "当前聊天已下载为 {format}。",
-      zip_packing: "正在打包 {format} ZIP...",
-      zip_packing_progress: "正在打包 {format} ZIP... {percent}%",
-      batch_done_packaged_success_failed:
-        "批量导出完成：已打包 ZIP，成功 {success} 条，失败 {failed} 条。",
-      batch_done_success_failed: "批量导出完成：成功 {success} 条，失败 {failed} 条。",
-      batch_done_packaged_success: "批量导出完成：已打包 ZIP，共 {success} 条。",
-      batch_done_success: "批量导出完成：成功 {success} 条。",
-      batch_done_manifest_only:
-        "所选聊天均导出失败；已生成仅含清单的 ZIP（失败 {failed} 条）。",
-      selected_all_done: "已全选当前列表。",
-      selected_agent_done: "已选中 {count} 条 Agent 记录。",
-      cleared_selection_done: "已清空选择。",
-      gui_init_failed: "GUI 初始化失败：节点缺失。",
-      readonly_ui_comment: "列表只展示可读信息，内部 UUID 不直接显示在 GUI 上。",
-      switched_language: "语言已切换，正在刷新...",
-      attach_summary_one: "附件 {count} 个",
-      attach_summary_many: "附件 {count} 个",
-      attachment_warning:
-        "不会单独下载附件文件；导出的附件链接可能会过期，或需要有效的 Arena 登录会话。",
-      attachment_warning_txt:
-        "附件：不会单独下载附件文件；导出的链接可能会过期，或需要有效的 Arena 登录会话。",
-      txt_title_fallback: "(untitled)",
-    },
+  const STRINGS = {
+    unknown_error: "Unknown error",
+    request_failed: "Request failed {status} {statusText}{suffix}",
+    invalid_session_id: "Invalid conversation identifier.",
+    unexpected_evaluation_shape: "The API did not return the expected conversation shape.",
+    unknown_export_format: "Unknown export format: {format}",
+    current_page_not_chat: "The current page is not a chat detail page.",
+    zip_lib_missing: "ZIP library is not loaded, ZIP packaging is unavailable.",
+    no_selected_items: "Select at least one conversation first.",
+    zip_generation_failed: "ZIP generation failed. Try fewer chats or switch export format.",
+    untitled: "(untitled)",
+    empty_message: "(empty)",
+    dock_primary: "Export",
+    dock_secondary: "Chat",
+    dock_aria_open: "Open chat export panel",
+    panel_title: "arena chat export",
+    close_aria: "Close",
+    section_current: "Current chat",
+    button_download_json: "Download JSON",
+    button_download_txt: "Download TXT",
+    section_history: "Conversation list",
+    button_fetch_history: "Fetch list",
+    helper_history: "The list starts empty. After loading, selected exports are packed into one ZIP with a manifest.",
+    button_select_all: "Select all",
+    button_clear_selection: "Clear",
+    selected_count: "{count} selected",
+    history_empty: "No conversations loaded yet",
+    button_export_selected_json: "Export selected JSON",
+    button_export_selected_txt: "Export selected TXT",
+    status_prefix: "Status: {message}",
+    status_ready: "Ready. Download the current chat or load the list for batch export.",
+    status_running: "{label}...",
+    status_done: "{label} completed.",
+    status_failed: "{label} failed: {message}",
+    label_fetch_history: "Loading list",
+    label_download_current: "Downloading current {format}",
+    label_export_selected: "Exporting selected {format}",
+    fetch_page_request: "Loading list... page {page}, loaded {count}",
+    fetch_page_loaded: "Loaded page {page}. Conversations: {count}",
+    fetch_complete: "Loaded {count} conversations.",
+    fetch_guard_hit:
+      "Loaded {count} conversations. The safety guard was hit; increase the guard if you still expect more.",
+    current_download_done: "Current chat was downloaded as {format}.",
+    zip_packing: "Packing {format} ZIP...",
+    zip_packing_progress: "Packing {format} ZIP... {percent}%",
+    batch_done_packaged_success_failed:
+      "Batch export finished. ZIP ready. Success: {success}. Failed: {failed}.",
+    batch_done_success_failed:
+      "Batch export finished. Success: {success}. Failed: {failed}.",
+    batch_done_packaged_success:
+      "Batch export finished. ZIP ready. Success: {success}.",
+    batch_done_success: "Batch export finished. Success: {success}.",
+    batch_done_manifest_only:
+      "All selected chat exports failed. A manifest-only ZIP was created (failed: {failed}).",
+    selected_all_done: "All loaded conversations are selected.",
+    cleared_selection_done: "Selection cleared.",
+    gui_init_failed: "GUI initialization failed: missing required nodes.",
+    attachment_warning:
+      "Attachment files are not downloaded; included links may expire or require an active Arena session.",
+    attachment_warning_txt:
+      "Attachments: files are not downloaded; included links may expire or require an active Arena session.",
+    tool_output_warning:
+      "Tool outputs are preserved as recorded; the exporter does not re-run tools or retrieve omitted fetch_page chunks/read_file ranges.",
+    tool_output_warning_txt:
+      "Tool outputs are preserved as recorded; omitted fetch_page chunks/read_file lines are not retrieved again.",
   };
 
-  function normalizeLocale(locale) {
-    const value = String(locale || "").trim().toLowerCase();
-    if (!value) {
-      return "";
-    }
-    if (value.startsWith("zh")) {
-      return "zh-CN";
-    }
-    return "en";
-  }
-
-  function getInitialLocale() {
-    const browserLocale =
-      navigator.language || (Array.isArray(navigator.languages) ? navigator.languages[0] : "");
-    return normalizeLocale(browserLocale) || "en";
-  }
-
-  let currentLocale = getInitialLocale();
-
   function t(key, vars) {
-    const table = I18N[currentLocale] || I18N.en;
-    const fallback = I18N.en;
-    let text = table[key] || fallback[key] || key;
+    const text = STRINGS[key] || key;
     if (!vars) {
       return text;
     }
@@ -1414,6 +1319,76 @@
       if (nestedInvocation) excludedKeys.add("toolInvocation");
       formatPartMetadata(lines, metadataSources, excludedKeys);
 
+      function appendToolCompletenessNotice(source) {
+        if (!source || typeof source !== "object") return;
+        const sourceToolName = String(source.toolName || toolName)
+          .toLowerCase()
+          .replace(/[\s-]+/g, "_");
+        const input = source.input !== undefined ? source.input : source.args;
+        const output = source.output !== undefined ? source.output : source.result;
+        if (!output || typeof output !== "object") return;
+
+        if (sourceToolName === "fetch_page") {
+          const chunkIndex = Number(output.chunkIndex ?? input?.chunkIndex);
+          const totalChunks = Number(output.totalChunks);
+          const hasMoreChunks =
+            output.hasMore === true ||
+            (Number.isFinite(chunkIndex) &&
+              Number.isFinite(totalChunks) &&
+              totalChunks > 0 &&
+              chunkIndex + 1 < totalChunks);
+          if (hasMoreChunks) {
+            const chunkLabel =
+              Number.isFinite(chunkIndex) &&
+              Number.isFinite(totalChunks) &&
+              totalChunks > 0
+                ? ` (chunk ${chunkIndex + 1} of ${totalChunks})`
+                : "";
+            lines.push(
+              `[notice: fetch_page response has more content${chunkLabel}; this exporter does not retrieve missing chunks]`
+            );
+          }
+        }
+
+        if (sourceToolName === "read_file") {
+          const totalLines =
+            output.lines == null ? Number.NaN : Number(output.lines);
+          const requestedLimit =
+            input?.limit == null ? Number.NaN : Number(input.limit);
+          const requestedOffset =
+            input?.offset == null ? 1 : Number(input.offset);
+          const contentLineCount =
+            typeof output.content === "string" && output.content.length
+              ? output.content.split(/\r\n|\n|\r/).length
+              : 0;
+          const startLine =
+            Number.isFinite(requestedOffset) && requestedOffset > 0
+              ? Math.floor(requestedOffset)
+              : 1;
+          const returnedLineCount =
+            Number.isFinite(requestedLimit) && requestedLimit > 0
+              ? Math.floor(requestedLimit)
+              : contentLineCount;
+          const endLine = startLine + Math.max(0, returnedLineCount) - 1;
+          const hasOmittedEarlierLines = startLine > 1;
+          const hasOmittedLaterLines =
+            Number.isFinite(totalLines) && totalLines > endLine;
+          if (hasOmittedEarlierLines || hasOmittedLaterLines) {
+            const lineSummary =
+              returnedLineCount > 0
+                ? Number.isFinite(totalLines)
+                  ? `lines ${startLine}-${Math.min(endLine, totalLines)} of ${totalLines}`
+                  : `starting at line ${startLine}`
+                : Number.isFinite(totalLines)
+                  ? `no content lines returned (reported total ${totalLines})`
+                  : "no content lines returned";
+            lines.push(
+              `[notice: read_file returned an excerpt (${lineSummary}); other lines are only present if captured by another tool call]`
+            );
+          }
+        }
+      }
+
       function appendToolIO(source, prefix) {
         if (!source || typeof source !== "object") return;
         for (const key of ["input", "args", "output", "result"]) {
@@ -1423,7 +1398,11 @@
       }
 
       appendToolIO(invocation, nestedInvocation ? "toolInvocation." : "");
-      if (nestedInvocation) appendToolIO(part, "part.");
+      appendToolCompletenessNotice(invocation);
+      if (nestedInvocation) {
+        appendToolIO(part, "part.");
+        appendToolCompletenessNotice(part);
+      }
       appendTruncationNotices(lines, part, "part");
       return lines.join("\n");
     }
@@ -1453,6 +1432,7 @@
       }`
     );
     lines.push(t("attachment_warning_txt"));
+    lines.push(t("tool_output_warning_txt"));
     lines.push("");
 
     messages.forEach((message, index) => {
@@ -1464,6 +1444,9 @@
       lines.push("------------------------------------------------------------");
       lines.push(`Message  : ${index + 1}`);
       lines.push(`Speaker  : ${role}`);
+      if (message?.createdAt) {
+        lines.push(`Time     : ${formatTextTime(message.createdAt)}`);
+      }
       lines.push("------------------------------------------------------------");
       lines.push(content);
       if (index !== messages.length - 1) {
@@ -1480,7 +1463,7 @@
       return {
         exportedAt: new Date().toISOString(),
         source: location.origin,
-        warnings: [t("attachment_warning")],
+        warnings: [t("attachment_warning"), t("tool_output_warning")],
         recordType: "agentic",
         conversationUrl:
           agent?.pageUrl || `${location.origin}${AGENT_PAGE_PREFIX}${agent?.id || ""}`,
@@ -1707,7 +1690,7 @@
       failedCount,
       successfulExports,
       failedExports,
-      warnings: [t("attachment_warning")],
+      warnings: [t("attachment_warning"), t("tool_output_warning")],
     };
     archiveEntries["manifest.json"] = zipLib.strToU8(
       `${JSON.stringify(manifest, null, 2)}\n`
@@ -1717,7 +1700,7 @@
     let zipBytes;
     try {
       hooks?.onZipProgress?.({ percent: 15 });
-      zipBytes = zipLib.zipSync(archiveEntries, { level: 0 });
+      zipBytes = zipLib.zipSync(archiveEntries, { level: 6 });
       hooks?.onZipProgress?.({ percent: 100 });
     } catch (error) {
       warn("zip generation failed", error);
@@ -1878,7 +1861,6 @@
               <div class="helper">${t("helper_history")}</div>
               <div class="sel-row">
                 <button class="btn" type="button" data-role="select-all">${t("button_select_all")}</button>
-                <button class="btn" type="button" data-role="select-agent">${t("button_select_agent")}</button>
                 <button class="btn" type="button" data-role="clear-selection">${t("button_clear_selection")}</button>
                 <span class="sel-sum" data-role="selection-summary">${t("selected_count", { count: 0 })}</span>
               </div>
@@ -1902,7 +1884,6 @@
       const exportCurrentTxtNode = panel?.querySelector('[data-role="export-current-txt"]');
       const fetchHistoryNode = panel?.querySelector('[data-role="fetch-history"]');
       const selectAllNode = panel?.querySelector('[data-role="select-all"]');
-      const selectAgentNode = panel?.querySelector('[data-role="select-agent"]');
       const clearSelectionNode = panel?.querySelector('[data-role="clear-selection"]');
       const exportSelectedJsonNode = panel?.querySelector('[data-role="export-selected-json"]');
       const exportSelectedTxtNode = panel?.querySelector('[data-role="export-selected-txt"]');
@@ -1917,7 +1898,6 @@
         !exportCurrentTxtNode ||
         !fetchHistoryNode ||
         !selectAllNode ||
-        !selectAgentNode ||
         !clearSelectionNode ||
         !exportSelectedJsonNode ||
         !exportSelectedTxtNode ||
@@ -2140,16 +2120,6 @@
         renderHistoryList();
         setStatus(t("selected_all_done"), "info");
       });
-      selectAgentNode.addEventListener("click", () => {
-        state.selectedKeys.clear();
-        for (const item of state.historyItems) {
-          if (item.type === "agentic") {
-            state.selectedKeys.add(getHistoryItemKey(item));
-          }
-        }
-        renderHistoryList();
-        setStatus(t("selected_agent_done", { count: state.selectedKeys.size }), "info");
-      });
       clearSelectionNode.addEventListener("click", () => {
         state.selectedKeys.clear();
         renderHistoryList();
@@ -2201,5 +2171,5 @@
     );
   };
 
-  log("ready v2.2");
+  log(`ready v${EXPORTER_VERSION}`);
 })();
