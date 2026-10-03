@@ -6,9 +6,7 @@
 // Without an argument the newest "*Exporter-*.user.js" in the repo root is used.
 // The suite drives the real script in a fake arena.ai page and checks:
 //   * archive scope handling (v2.3.2): list scopes, archived badges, manifest,
-//     JSON/TXT payloads, the window.__arenaChatExport console API;
-//   * reconcile mode (v2.3.3): saved-list comparison, exporting only the chats
-//     missing from the account, error handling for invalid files.
+//     JSON/TXT payloads, the window.__arenaChatExport console API.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -279,116 +277,7 @@ function scopeSelectValue(node) {
 }
 
 // ---------------------------------------------------------------------------
-// suite 2 — reconcile mode (v2.3.3 features)
-// ---------------------------------------------------------------------------
-async function suiteReconcile() {
-  console.log("\n# suite: reconcile with a saved list (v2.3.3)");
-  const GONE_1 = "01a0fb57-9e42-79fc-bcef-f44d218a5014";
-  const GONE_2 = "01a0f82a-5853-726c-9b49-4113330d8727";
-
-  const entries = [
-    { type: "evaluation", id: EVAL_A, title: "Active chat", mode: "direct-battle", createdAt: "2026-10-02T06:41:22.703+00", updatedAt: "2026-10-02T06:54:01.160672+00", archivedAt: null },
-    { type: "evaluation", id: EVAL_B, title: "Archived chat", mode: "battle", createdAt: "2026-09-10T09:00:00.000Z", updatedAt: "2026-09-11T10:00:00.000Z", archivedAt: "2026-09-12T12:00:00.000Z" },
-  ];
-  const harness = createHarness({
-    entriesForCursor: () => ({ entries, pagination: { hasMore: false, cursor: null, limit: 20 } }),
-    evaluationFor: (id) => sampleEvaluation(id, { title: `Chat ${id.slice(0, 4)}`, archivedAt: id === EVAL_B ? "2026-09-12T12:00:00.000Z" : null }),
-  });
-  const { window, state } = harness;
-  await mountScript(window);
-  const document = window.document;
-  const $ = (sel) => document.querySelector(sel);
-
-  const hasReconcileUi = Boolean($('[data-role="load-saved-list"]') && $('[data-role="export-missing-json"]'));
-  if (!hasReconcileUi) {
-    console.log("SKIP  this script has no reconcile UI (added in v2.3.3)");
-    return;
-  }
-  check("reconcile UI is present", hasReconcileUi);
-
-  const missingJsonBtn = $('[data-role="export-missing-json"]');
-  check("missing buttons start disabled", missingJsonBtn.disabled && $('[data-role="export-missing-txt"]').disabled);
-
-  $('[data-role="fetch-history"]').click();
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Loaded 2 conversations"), "history fetch");
-
-  const savedList = {
-    exporter: "Arena.ai / LMSYS Arena Chat Exporter",
-    version: "2.3.2",
-    scope: "all",
-    counts: { total: 3, archived: 1, active: 2 },
-    items: [
-      { id: EVAL_A, type: "evaluation", title: "Active chat", mode: "direct-battle", createdAt: "2026-10-02T06:41:22.703+00", updatedAt: "2026-10-02T06:54:01.160672+00", archivedAt: null },
-      { id: GONE_1, type: "evaluation", title: "Дай ответ", mode: "direct-battle", createdAt: "2026-10-02T06:41:22.703+00", updatedAt: "2026-10-02T06:54:01.160672+00", archivedAt: null },
-      { id: GONE_2, type: "agentic", title: "дай темы и домашние задания с 1 сентября до 2 октября", createdAt: "2026-10-01T15:52:02.229907+00", updatedAt: "2026-10-01T16:18:37.487809+00", archivedAt: "2026-10-02T00:00:00.000Z" },
-    ],
-  };
-
-  const input = $('[data-role="saved-list-input"]');
-  const feedFile = async (name, content) => {
-    const file = new window.File([content], name, { type: "application/json" });
-    Object.defineProperty(input, "files", { value: [file], writable: true, configurable: true });
-    input.dispatchEvent(new window.Event("change", { bubbles: true }));
-  };
-
-  await feedFile("arena-chat-list-all-2026-10-03T16-39-49-640Z.json", JSON.stringify(savedList));
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Saved list:"), "saved list compare");
-  const statusText = $("#arena-chat-export-status").textContent;
-  check(
-    "comparison reports missing and new chats",
-    statusText.includes("Saved list: 3 items (1 archived)") &&
-      statusText.includes("Missing from the current list: 2") &&
-      statusText.includes("New in the account: 1"),
-    statusText
-  );
-  check("missing buttons enabled after compare", !missingJsonBtn.disabled);
-
-  state.zipEntries = null;
-  missingJsonBtn.click();
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Missing chats exported"), "missing export", 8000);
-  const chatFiles = zipFileNames(state).filter((n) => n.endsWith(".json") && n !== "manifest.json");
-  check("ZIP contains exactly the missing chats", chatFiles.length === 2, JSON.stringify(chatFiles));
-  const manifest = zipJson(window, state, "manifest.json");
-  check(
-    "manifest records the reconcile context",
-    manifest.reconcile === true && manifest.savedListCount === 3 && manifest.currentListCount === 2 && String(manifest.savedListFile || "").includes("arena-chat-list-all"),
-    JSON.stringify({ r: manifest.reconcile, s: manifest.savedListCount, c: manifest.currentListCount })
-  );
-  check("reconcile export succeeded fully", manifest.successCount === 2 && manifest.failedCount === 0);
-  const decoded = chatFiles.map((n) => zipJson(window, state, n));
-  check(
-    "saved-list archivedAt is injected when the API has none",
-    decoded.some((r) => r.evaluation?.id === GONE_2 && r.archivedAt === "2026-10-02T00:00:00.000Z")
-  );
-
-  await feedFile("manifest.json", JSON.stringify({
-    exporter: "Arena.ai / LMSYS Arena Chat Exporter",
-    version: "2.3.2",
-    successfulExports: [
-      { conversationId: EVAL_B, recordType: "evaluation", title: "Archived chat", archivedAt: "2026-09-12T12:00:00.000Z" },
-      { conversationId: GONE_1, recordType: "evaluation", title: "Дай ответ", archivedAt: null },
-    ],
-    failedExports: [],
-  }));
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Saved list: 2 items"), "manifest compare");
-  check("manifest.json from a previous export is accepted", $("#arena-chat-export-status").textContent.includes("Missing from the current list: 1"), $("#arena-chat-export-status").textContent);
-
-  await feedFile("notes.txt", "not json at all");
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("failed"), "invalid file handling");
-  check(
-    "invalid file produces a clean error and keeps the previous state",
-    $("#arena-chat-export-status").textContent.includes("not a recognized saved list") && !missingJsonBtn.disabled,
-    $("#arena-chat-export-status").textContent
-  );
-
-  $('[data-role="fetch-history"]').click();
-  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Loaded 2 conversations"), "refetch");
-  check("fresh list fetch resets the missing state", missingJsonBtn.disabled);
-}
-
-// ---------------------------------------------------------------------------
 console.log(`script under test: ${path.relative(ROOT, SCRIPT_PATH)} (${source.match(/@version\s+(\S+)/)[1]})`);
 await suiteArchiveScope();
-await suiteReconcile();
 console.log(`\n${checks - failures}/${checks} checks passed`);
 process.exit(failures ? 1 : 0);

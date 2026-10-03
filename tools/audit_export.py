@@ -45,6 +45,13 @@ HEADER_RE = re.compile(r"^(Title|Type|Mode|Started|Updated|Archived|Messages|URL
 MESSAGE_BLOCK_RE = re.compile(r"^Message  : \d+$", re.M)
 
 
+def _as_number(value):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def iter_zip_paths(targets: list[str]) -> list[str]:
     paths: list[str] = []
     for target in targets:
@@ -69,8 +76,8 @@ def read_zip_entries(path: str) -> dict[str, bytes]:
 class Chat:
     """One exported conversation, parsed from either a TXT or a JSON record."""
 
-    __slots__ = ("id", "type", "title", "messages", "chars", "archived_at", "tools", "notices",
-                 "reasoning_blocks", "empty_markers", "source", "problems", "kind")
+    __slots__ = ("id", "type", "title", "messages", "chars", "archived_at", "tools", "tool_ids",
+                 "notices", "reasoning_blocks", "empty_markers", "source", "problems", "kind")
 
     def __init__(self, source: str):
         self.source = source
@@ -82,6 +89,7 @@ class Chat:
         self.chars = 0
         self.archived_at = None
         self.tools: Counter = Counter()
+        self.tool_ids: set = set()
         self.notices: Counter = Counter()
         self.reasoning_blocks = 0
         self.empty_markers = 0
@@ -116,7 +124,13 @@ class Chat:
             chat.problems.append(f"header claims {chat.messages} messages, but only {blocks} are present")
         chat.reasoning_blocks = text.count("[reasoning]")
         chat.empty_markers = text.count("(empty)")
-        chat.tools.update(TOOL_RE.findall(text))
+        markers = list(TOOL_RE.finditer(text))
+        for index, marker in enumerate(markers):
+            block_end = markers[index + 1].start() if index + 1 < len(markers) else len(text)
+            block = text[marker.end(): min(block_end, marker.end() + 20000)]
+            if re.search(r"^metadata\.", block, re.M):
+                chat.tools[marker.group(1)] += 1
+        chat.tool_ids.update(re.findall(r"^metadata\.toolCallId:\s*\n(\S+)$", text, re.M))
         chat.notices.update(re.sub(r"\(.*", "", n).strip() for n in NOTICE_RE.findall(text))
         return chat
 
@@ -135,7 +149,91 @@ class Chat:
         chat.messages = len(messages) if isinstance(messages, list) else None
         if not chat.id:
             chat.problems.append("no id in the JSON record")
+        for message in messages if isinstance(messages, list) else []:
+            if not isinstance(message, dict):
+                continue
+            for part in message.get("parts") or []:
+                if isinstance(part, dict):
+                    cls._read_part(chat, part)
         return chat
+
+    @classmethod
+    def _read_part(cls, chat: "Chat", part: dict) -> None:
+        """Mirror the userscript's TXT notices so the two formats can be compared."""
+        part_type = str(part.get("type") or "")
+        nested = part.get("toolInvocation") if isinstance(part.get("toolInvocation"), dict) else None
+        if part_type.startswith("tool-") or part_type == "dynamic-tool" or nested:
+            invocation = nested or part
+            tool_name = str(invocation.get("toolName") or part_type.replace("tool-", "", 1) or "tool")
+            if tool_name == "dynamic":
+                tool_name = str(invocation.get("toolName") or "tool")
+            chat.tools[tool_name] += 1
+            call_id = invocation.get("toolCallId") or part.get("toolCallId")
+            if call_id:
+                chat.tool_ids.add(str(call_id))
+            for source in (invocation, part) if nested else (part,):
+                cls._read_tool_notices(chat, source, tool_name)
+        elif part_type == "reasoning":
+            text = part.get("text") if isinstance(part.get("text"), str) else part.get("reasoning")
+            if isinstance(text, str) and text.strip():
+                chat.reasoning_blocks += 1
+        cls._scan_truncations(chat, part)
+
+    @staticmethod
+    def _read_tool_notices(chat: "Chat", source: dict, tool_name: str) -> None:
+        input_ = source.get("input") if source.get("input") is not None else source.get("args")
+        output = source.get("output") if source.get("output") is not None else source.get("result")
+        if not isinstance(output, dict):
+            return
+        status = str(output.get("status") or "").lower()
+        if status in ("error", "failed", "failure") or output.get("error"):
+            chat.notices["this tool call reported an error; see its recorded status/error fields"] += 1
+        normalized = tool_name.lower().replace("-", "_").replace(" ", "_")
+        if normalized == "fetch_page":
+            chunk_index = _as_number(output.get("chunkIndex"))
+            if chunk_index is None and isinstance(input_, dict):
+                chunk_index = _as_number(input_.get("chunkIndex"))
+            total_chunks = _as_number(output.get("totalChunks"))
+            has_more = output.get("hasMore") is True or (
+                chunk_index is not None and total_chunks and total_chunks > 0
+                and chunk_index + 1 < total_chunks
+            )
+            if has_more:
+                chat.notices["fetch_page response has more content"] += 1
+        if normalized == "read_file":
+            if str(output.get("kind") or "").lower() == "image" and not output.get("content") and not output.get("data"):
+                chat.notices["read_file returned image metadata only; image bytes are not included in this tool response"] += 1
+            total_lines = _as_number(output.get("lines"))
+            requested_limit = _as_number(input_.get("limit")) if isinstance(input_, dict) else None
+            requested_offset = _as_number(input_.get("offset")) if isinstance(input_, dict) else None
+            offset = 1 if requested_offset is None else requested_offset
+            content = output.get("content")
+            content_lines = len(re.split(r"\r\n|\n|\r", content)) if isinstance(content, str) and content else 0
+            start_line = int(offset) if offset and offset > 0 else 1
+            returned = int(requested_limit) if requested_limit and requested_limit > 0 else content_lines
+            end_line = start_line + max(0, returned) - 1
+            if start_line > 1 or (total_lines is not None and total_lines > end_line):
+                chat.notices["read_file returned an excerpt"] += 1
+
+    @staticmethod
+    def _scan_truncations(chat: "Chat", value, path: str = "part") -> None:
+        if isinstance(value, list):
+            for index, entry in enumerate(value):
+                Chat._scan_truncations(chat, entry, f"{path}[{index}]")
+            return
+        if not isinstance(value, dict):
+            return
+        for key, field_value in value.items():
+            field_path = f"{path}.{key}"
+            if "truncat" in key.lower() and field_value:
+                if key.lower() == "stdout_truncated":
+                    chat.notices["stdout was truncated before export"] += 1
+                elif key.lower() == "stderr_truncated":
+                    chat.notices["stderr was truncated before export"] += 1
+                else:
+                    chat.notices["upstream reported truncation"] += 1
+            elif isinstance(field_value, (dict, list)):
+                Chat._scan_truncations(chat, field_value, field_path)
 
 
 def load_chats(zip_path: str) -> tuple[dict, list[Chat], list[dict]]:
@@ -253,6 +351,8 @@ def main() -> int:
         notices.update(best.notices)
     if tools:
         print("# tools:", dict(tools))
+        unique_ids = sum(len(max(group, key=lambda c: c.chars).tool_ids) for group in all_chats.values())
+        print(f"# tool calls identified by toolCallId: {unique_ids}")
     if notices:
         print("# notices:", dict(notices))
 
@@ -296,19 +396,24 @@ def main() -> int:
             delta_msgs = (new.messages or 0) - (old.messages or 0)
             delta_chars = new.chars - old.chars
             lost_tools = {k: (old.tools[k], new.tools[k]) for k in old.tools if new.tools[k] < old.tools[k]}
+            lost_calls = old.tool_ids - new.tool_ids if old.tool_ids and new.tool_ids else set()
             # character counts are only comparable within one representation
             chars_worse = same_format and delta_chars < -2000
             chars_better = same_format and delta_chars > 2000
-            if delta_msgs < 0 or chars_worse or lost_tools:
-                detail = f"messages {old.messages}->{new.messages}, tools {lost_tools}"
+            if delta_msgs < 0 or chars_worse or lost_calls:
+                detail = f"messages {old.messages}->{new.messages}, missing tool calls {len(lost_calls)}"
                 if same_format:
-                    detail = f"messages {old.messages}->{new.messages}, chars {old.chars}->{new.chars}, tools {lost_tools}"
+                    detail = (f"messages {old.messages}->{new.messages}, chars {old.chars}->{new.chars}, "
+                              f"missing tool calls {len(lost_calls)}")
+                if lost_calls and not same_format:
+                    detail += " (compared by toolCallId; TXT name counts can include quoted transcripts)"
                 regressions.append(f"{cid}: {detail}")
             elif delta_msgs > 0 or chars_better or (same_format and new.chars != old.chars):
                 richer += 1
         print(f"\n# baseline comparison: {len(shared)} shared chats | unchanged/changed: {len(shared) - len(regressions)} | regressions: {len(regressions)}")
         if cross_format_pairs:
-            print(f"#   {cross_format_pairs} chats were compared across formats; only messages and tool counts are used there")
+            print(f"#   {cross_format_pairs} chats were compared across formats: message counts and toolCallId sets "
+                  f"(text size is not comparable between TXT and JSON)")
         for line in regressions[:20]:
             print(f"      REGRESSION {line}")
         if regressions:
