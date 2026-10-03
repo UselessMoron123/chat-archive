@@ -6,6 +6,7 @@
     "test": "node tests/exporter.test.mjs"
   },
   "devDependencies": {
+    "fflate": "^0.8.2",
     "jsdom": "^26.0.0"
   }
 }
