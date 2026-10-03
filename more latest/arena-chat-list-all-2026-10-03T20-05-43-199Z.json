@@ -1,0 +1,2210 @@
+{
+  "exporter": "Arena.ai / LMSYS Arena Chat Exporter",
+  "version": "2.4.0",
+  "exportedAt": "2026-10-03T20:05:43.199Z",
+  "source": "https://arena.ai",
+  "scope": "all",
+  "counts": {
+    "total": 244,
+    "archived": 243,
+    "active": 1
+  },
+  "items": [
+    {
+      "id": "01a10295-d421-7ab5-b499-f596409af23c",
+      "type": "agentic",
+      "title": "прочитай тщательно этот файл (arena-agent-сначала посмотри в мой другой репо_ [https___[github.com](…",
+      "mode": "unknown",
+      "createdAt": "2026-10-03 16:25:38.407154+00",
+      "updatedAt": "2026-10-03 19:16:35.11975+00",
+      "archivedAt": null
+    },
+    {
+      "id": "01a1014c-c144-7924-902d-9f93a8ca22ca",
+      "type": "agentic",
+      "title": "сначала посмотри в мой другой репо: [https://github.com/UselessMoron123/all-my-chats/tree/main](http…",
+      "mode": "unknown",
+      "createdAt": "2026-10-03 10:26:12.415918+00",
+      "updatedAt": "2026-10-03 15:42:07.847978+00",
+      "archivedAt": "2026-10-03 16:37:04.784+00"
+    },
+    {
+      "id": "01a10133-05b7-7473-8f08-b0208867a335",
+      "type": "agentic",
+      "title": "look in archive. there's export of chat that you should read to understand what's going on, and two …",
+      "mode": "unknown",
+      "createdAt": "2026-10-03 09:58:05.5847+00",
+      "updatedAt": "2026-10-03 10:04:27.098162+00",
+      "archivedAt": "2026-10-03 16:37:02.285+00"
+    },
+    {
+      "id": "01a10111-5e5c-72dd-9e02-43b2812ae425",
+      "type": "agentic",
+      "title": "посмотри внутри канала и в моём репозитории:\n\n\n\n[https://t.me/s/Pelimescha_Kanal](https://t.me/s/Pel…",
+      "mode": "unknown",
+      "createdAt": "2026-10-03 09:21:19.926397+00",
+      "updatedAt": "2026-10-03 09:33:29.488098+00",
+      "archivedAt": "2026-10-03 16:36:58.627+00"
+    },
+    {
+      "id": "01a0fe4e-2fdd-7b33-90d0-1c7fd40f6254",
+      "type": "agentic",
+      "title": "Можешь почмотреть что по ссылке?\n\n\n\nhttps://www.hiwaifu.com/share/8297193",
+      "mode": "unknown",
+      "createdAt": "2026-10-02 20:28:53.068166+00",
+      "updatedAt": "2026-10-03 09:30:04.989809+00",
+      "archivedAt": "2026-10-03 16:37:07.794+00"
+    },
+    {
+      "id": "01a0fded-1266-7d15-a227-16d6853805e3",
+      "type": "agentic",
+      "title": "cleanslate in github just got some updates. check them",
+      "mode": "unknown",
+      "createdAt": "2026-10-02 18:42:50.217663+00",
+      "updatedAt": "2026-10-02 19:12:28.168211+00",
+      "archivedAt": "2026-10-03 16:37:12.096+00"
+    },
+    {
+      "id": "01a0f39b-97a4-7650-ae86-fb4de238fcc1",
+      "type": "agentic",
+      "title": "поищи в интернете по этим ссылкам и запросу\n\n\n\n[https://vc.ru/ai/2966523-lokalnye-neirosseti-zapusk-…",
+      "mode": "unknown",
+      "createdAt": "2026-09-30 18:37:37.524102+00",
+      "updatedAt": "2026-09-30 19:43:00.68347+00",
+      "archivedAt": "2026-10-03 16:37:14.215+00"
+    },
+    {
+      "id": "01a0f2ed-fdfc-7c9a-8e86-96470b17f220",
+      "type": "agentic",
+      "title": "look in repo. how many chat exports is there",
+      "mode": "unknown",
+      "createdAt": "2026-09-30 15:28:01.228505+00",
+      "updatedAt": "2026-09-30 17:50:44.518822+00",
+      "archivedAt": "2026-10-03 16:37:19.316+00"
+    },
+    {
+      "id": "01a0f2ea-04fc-7727-b867-32ee940c592c",
+      "type": "agentic",
+      "title": "read [Новый текстовый документ2.txt](https://github.com/UselessMoron123/all-my-chats/blob/main/%D0%9…",
+      "mode": "unknown",
+      "createdAt": "2026-09-30 15:23:41.30774+00",
+      "updatedAt": "2026-09-30 15:25:41.644195+00",
+      "archivedAt": "2026-09-30 17:26:18.389+00"
+    },
+    {
+      "id": "01a0ee40-fd55-7ead-a85d-5ea62e03cbe8",
+      "type": "agentic",
+      "title": "look in repo. i managed to export my chats, but i suspect there's something missed by script. in txt…",
+      "mode": "unknown",
+      "createdAt": "2026-09-29 17:40:34.000284+00",
+      "updatedAt": "2026-09-30 14:43:22.200618+00",
+      "archivedAt": "2026-09-30 15:20:49.109+00"
+    },
+    {
+      "id": "01a0e97f-7f23-7963-bcf0-4dee795ff8f6",
+      "type": "agentic",
+      "title": "просмотри страницу",
+      "mode": "unknown",
+      "createdAt": "2026-09-28 19:30:43.834271+00",
+      "updatedAt": "2026-09-29 16:24:46.936853+00",
+      "archivedAt": "2026-09-29 16:30:47.271+00"
+    },
+    {
+      "id": "019fc16c-5b7d-71de-a6dd-abec1957f2ae",
+      "type": "agentic",
+      "title": "Ты можешь выписать все сцены где фигурируют Мики и Билли?",
+      "mode": "unknown",
+      "createdAt": "2026-08-02 07:55:28.477418+00",
+      "updatedAt": "2026-09-29 15:28:15.413648+00",
+      "archivedAt": "2026-10-03 16:37:26.056+00"
+    },
+    {
+      "id": "01a0ecea-3364-7888-9a08-4d786f4b6e14",
+      "type": "agentic",
+      "title": "Возможно ли создать/собрать ИИ агента который сможет зарабатывать деньги (почти) самостоятельно?",
+      "mode": "unknown",
+      "createdAt": "2026-09-29 11:26:08.476616+00",
+      "updatedAt": "2026-09-29 11:27:28.136789+00",
+      "archivedAt": "2026-10-03 16:37:27.966+00"
+    },
+    {
+      "id": "01a0ec23-181a-7a17-971e-ab5683cce519",
+      "type": "agentic",
+      "title": "Can you look at previous versions of ([lmarena.ru](http://lmarena.ru)) by using wayback machine?",
+      "mode": "unknown",
+      "createdAt": "2026-09-29 07:48:38.917711+00",
+      "updatedAt": "2026-09-29 07:56:26.964963+00",
+      "archivedAt": "2026-10-03 16:37:31.56+00"
+    },
+    {
+      "id": "01a0e70c-ecf6-7803-a742-ed2961e4dd72",
+      "type": "agentic",
+      "title": "Посмотри страницу этого видео (https://m.youtube.com/watch?v=Gw_hnD7m00M&amp;pp=0gcJCYsCo7VqN5tDiggU…",
+      "mode": "unknown",
+      "createdAt": "2026-09-28 08:06:20.406798+00",
+      "updatedAt": "2026-09-28 08:07:28.075159+00",
+      "archivedAt": "2026-10-03 16:37:34.022+00"
+    },
+    {
+      "id": "01a0e6f4-a2f2-7350-8100-144ba15c5c07",
+      "type": "agentic",
+      "title": "Я живу в России. Можно ли как-то заработать крипту (ты можешь посоветовать или помочь? Может локальн…",
+      "mode": "unknown",
+      "createdAt": "2026-09-28 07:39:49.206362+00",
+      "updatedAt": "2026-09-28 07:52:25.753361+00",
+      "archivedAt": "2026-10-03 19:26:50.282+00"
+    },
+    {
+      "id": "01a0e685-430d-7536-9046-db905c362cdd",
+      "type": "agentic",
+      "title": "Я в России. У меня есть Я, ты (agent mode на сайте arena ai), интернет (WiFi для ноутбука, мобильный…",
+      "mode": "unknown",
+      "createdAt": "2026-09-28 05:38:10.558488+00",
+      "updatedAt": "2026-09-28 07:32:21.329983+00",
+      "archivedAt": "2026-10-03 19:26:45.51+00"
+    },
+    {
+      "id": "01a0e4ce-91f4-7459-8937-ff0ba37d68db",
+      "type": "agentic",
+      "title": "Сначала просмотри все данные ниже ссылки которые сможешь. Потом уже начни искать по текстовому запро…",
+      "mode": "unknown",
+      "createdAt": "2026-09-27 21:39:01.187219+00",
+      "updatedAt": "2026-09-27 21:43:39.085505+00",
+      "archivedAt": "2026-10-03 19:26:40.447+00"
+    },
+    {
+      "id": "01a0dd34-a816-73ee-aa5a-9ed50a568d1d",
+      "type": "agentic",
+      "title": "I want a roleplay. Year 2017. Imagine that you're one of these AI agents from stories where people l…",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 10:13:31.676532+00",
+      "updatedAt": "2026-09-26 10:14:50.436016+00",
+      "archivedAt": "2026-10-03 19:26:36.793+00"
+    },
+    {
+      "id": "01a0dcea-f68f-71fb-bbf6-35affee7e958",
+      "type": "agentic",
+      "title": "I want a roleplay. Year 2017. Imagine that you're one of these AI agents from stories where people l…",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 08:53:02.83597+00",
+      "updatedAt": "2026-09-26 08:55:06.709822+00",
+      "archivedAt": "2026-09-30 20:08:07.921+00"
+    },
+    {
+      "id": "01a0dcdc-d44b-77c8-9b14-6fb826775927",
+      "type": "agentic",
+      "title": "I want a roleplay. Year 2017. Imagine that you're one of these AI agents from stories where people l…",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 08:37:35.738659+00",
+      "updatedAt": "2026-09-26 08:38:14.651263+00",
+      "archivedAt": "2026-09-30 20:07:58.673+00"
+    },
+    {
+      "id": "01a0dc5f-2d96-718f-9b2f-00e0b19954da",
+      "type": "agentic",
+      "title": "Скайрим. МинМакс стратегии",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 06:20:21.548984+00",
+      "updatedAt": "2026-09-26 06:21:05.07578+00",
+      "archivedAt": "2026-09-30 19:59:14.406+00"
+    },
+    {
+      "id": "01a0dc55-7a10-721d-84bf-0bb28754769a",
+      "type": "agentic",
+      "title": "Я сейчас пишу с телефона (к ПК подойду только через несколько часов). Использую браузер opera touch.…",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 06:09:46.314226+00",
+      "updatedAt": "2026-09-26 06:10:07.469653+00",
+      "archivedAt": "2026-09-30 19:59:51.404+00"
+    },
+    {
+      "id": "01a0dc16-6dbd-7f1e-b857-0b5f5328c6fd",
+      "type": "agentic",
+      "title": "Посмотри всю полезную информацию в статье \"https://habr.com/ru/articles/1062238/\"",
+      "mode": "unknown",
+      "createdAt": "2026-09-26 05:00:53.256898+00",
+      "updatedAt": "2026-09-26 05:28:59.331287+00",
+      "archivedAt": "2026-09-30 19:59:59.158+00"
+    },
+    {
+      "id": "01a0cd81-f1bc-7830-9d77-86c83038277f",
+      "type": "agentic",
+      "title": "Модешь поискать в кубикусе сообщение от пользователя Arararium. В \"помогите найти/вспомнить\". Он спр…",
+      "mode": "unknown",
+      "createdAt": "2026-09-23 09:04:01.677676+00",
+      "updatedAt": "2026-09-23 10:09:08.511169+00",
+      "archivedAt": "2026-09-30 20:00:01.787+00"
+    },
+    {
+      "id": "01a0cc9a-e715-7e05-ab40-1096a8c9b69a",
+      "type": "agentic",
+      "title": "Найди фанфик \"ggwp r?\" Будущее, человек тестер виртуальных игр, его шлем (или капсула) ломается и он…",
+      "mode": "unknown",
+      "createdAt": "2026-09-23 04:51:39.848366+00",
+      "updatedAt": "2026-09-23 06:47:24.336999+00",
+      "archivedAt": "2026-09-30 20:00:04.528+00"
+    },
+    {
+      "id": "01a0c2bb-505d-77b8-b2d9-d0f00384d67c",
+      "type": "agentic",
+      "title": "Search all information about slmp windows (vk site got closed). Preferably author somewhere posted i…",
+      "mode": "unknown",
+      "createdAt": "2026-09-21 06:50:54.189842+00",
+      "updatedAt": "2026-09-21 08:58:52.798372+00",
+      "archivedAt": "2026-09-30 20:00:12.624+00"
+    },
+    {
+      "id": "01a0c2aa-f7b3-74d2-b455-aae34f19d851",
+      "type": "agentic",
+      "title": "Try if you can read this forum - https://forum.paradoxplaza.com/forum/threads/mod-resource-cleanslat…",
+      "mode": "unknown",
+      "createdAt": "2026-09-21 06:33:00.41118+00",
+      "updatedAt": "2026-09-21 06:43:16.012241+00",
+      "archivedAt": "2026-09-30 20:00:15.822+00"
+    },
+    {
+      "id": "01a0b6ab-32b9-71c9-a099-b1bc80d91040",
+      "type": "agentic",
+      "title": "I wanted to play Vrising offline. I tried some in game settings, something with LAN, it probably mea…",
+      "mode": "unknown",
+      "createdAt": "2026-09-18 22:37:48.800647+00",
+      "updatedAt": "2026-09-18 22:38:24.356483+00",
+      "archivedAt": "2026-09-30 20:00:19.314+00"
+    },
+    {
+      "id": "01a0b538-7251-7e49-ad5f-aa6d6ea9c9cd",
+      "type": "agentic",
+      "title": "Look at the picture. Think of how the whole game could look like. And if we could make it real",
+      "mode": "unknown",
+      "createdAt": "2026-09-18 15:52:53.679926+00",
+      "updatedAt": "2026-09-18 15:53:19.65736+00",
+      "archivedAt": "2026-09-30 20:00:44.623+00"
+    },
+    {
+      "id": "01a0a492-42d1-74da-b81f-a86234540268",
+      "type": "agentic",
+      "title": "Я хочу почувствовать себя попаданцем в Утиные Истории (может на место одного из утят). (Помоги опред…",
+      "mode": "unknown",
+      "createdAt": "2026-09-15 10:17:25.817015+00",
+      "updatedAt": "2026-09-15 11:55:15.129605+00",
+      "archivedAt": "2026-09-30 20:00:47.296+00"
+    },
+    {
+      "id": "01a0a433-c795-78e5-bb60-1e81cdeb7fda",
+      "type": "agentic",
+      "title": "Narrate. I'm Ray, 17. I have normal teenage interests - playing PC, watching anime, reading fantasy,…",
+      "mode": "unknown",
+      "createdAt": "2026-09-15 08:34:12.991342+00",
+      "updatedAt": "2026-09-15 08:38:50.084651+00",
+      "archivedAt": "2026-09-30 20:00:54.341+00"
+    },
+    {
+      "id": "01a0969c-8267-72e1-9731-3421688d15bc",
+      "type": "agentic",
+      "title": "write character sheets with bloodlines",
+      "mode": "unknown",
+      "createdAt": "2026-09-12 17:14:34.194962+00",
+      "updatedAt": "2026-09-13 08:38:01.270519+00",
+      "archivedAt": "2026-09-30 20:02:07.274+00"
+    },
+    {
+      "id": "01a08b78-72b7-75a1-9075-e069637fd909",
+      "type": "evaluation",
+      "title": "Я хочу сделать яндекс игру которая принесёт прибыль",
+      "mode": "direct-battle",
+      "createdAt": "2026-09-10 13:19:24.171+00",
+      "updatedAt": "2026-09-10 13:43:59.963764+00",
+      "archivedAt": "2026-09-30 20:01:38.204+00"
+    },
+    {
+      "id": "01a08b64-b075-720d-9bfe-dcde6498f5be",
+      "type": "agentic",
+      "title": "Если я хочу сделать яндекс игру, за которую хочу получать деньги. Достаточно ли мне кодинга(с которы…",
+      "mode": "unknown",
+      "createdAt": "2026-09-10 12:57:07.66465+00",
+      "updatedAt": "2026-09-10 12:59:47.247722+00",
+      "archivedAt": "2026-09-30 20:01:41.01+00"
+    },
+    {
+      "id": "01a08488-6ef1-78d2-a295-72b621585f3f",
+      "type": "agentic",
+      "title": "I want to see world's significant events. From perspective of a roman legionnaire. Who's immortal (b…",
+      "mode": "unknown",
+      "createdAt": "2026-09-09 04:58:49.879976+00",
+      "updatedAt": "2026-09-09 05:03:05.634833+00",
+      "archivedAt": "2026-09-30 20:01:51.301+00"
+    },
+    {
+      "id": "01a082f0-bcc8-78b2-b71f-08d6790bf987",
+      "type": "agentic",
+      "title": "Let's roleplay. I want an interactive story/litrpg in setting of chinese cultivation stories",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 21:33:30.964977+00",
+      "updatedAt": "2026-09-08 21:57:19.159805+00",
+      "archivedAt": "2026-09-30 20:03:20.336+00"
+    },
+    {
+      "id": "01a0803f-7b7c-7889-a3bf-e54ab08bba58",
+      "type": "agentic",
+      "title": "Попробуй найти фанфик по пиратам карибского моря. Там был Попаданец, ему бог моря дал бессмертие/рег…",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 09:00:40.332317+00",
+      "updatedAt": "2026-09-08 09:12:15.469588+00",
+      "archivedAt": "2026-09-30 20:07:10.098+00"
+    },
+    {
+      "id": "01a08039-2523-7cb6-9600-34d309ed371f",
+      "type": "agentic",
+      "title": "Представим что я попаданец в Скайрим, в теле бретонца. И я назову себя именем своего персонажа \"Ray …",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 08:53:56.156949+00",
+      "updatedAt": "2026-09-08 08:54:22.561585+00",
+      "archivedAt": "2026-09-30 20:03:41.892+00"
+    },
+    {
+      "id": "01a08001-6810-7716-b61d-c117e38cd5ae",
+      "type": "agentic",
+      "title": "I want Skyrim RP. I was a regular teenager, 16, really liked to play this game after school, went th…",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 07:52:51.72515+00",
+      "updatedAt": "2026-09-08 08:25:48.546142+00",
+      "archivedAt": "2026-09-30 20:07:49.967+00"
+    },
+    {
+      "id": "01a07ff6-2322-76a8-91a6-be4016fafdb6",
+      "type": "agentic",
+      "title": "\"Spore\" game roleplay. I'm a cell",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 07:40:33.562083+00",
+      "updatedAt": "2026-09-08 07:43:39.034471+00",
+      "archivedAt": "2026-09-30 20:07:20.45+00"
+    },
+    {
+      "id": "01a07fee-7584-778e-bfb6-23207b646d92",
+      "type": "agentic",
+      "title": "Let's roleplay. I'm a person who died and was going to afterlife, but some spiritual wind blew me aw…",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 07:32:11.100896+00",
+      "updatedAt": "2026-09-08 07:38:56.535702+00",
+      "archivedAt": "2026-09-30 20:07:39.337+00"
+    },
+    {
+      "id": "01a07fea-ecf9-772b-8871-f98c8f87e034",
+      "type": "agentic",
+      "title": "Let's roleplay. I'm a person who died and was going to afterlife, but some spiritual wind blew me aw…",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 07:28:18.684279+00",
+      "updatedAt": "2026-09-08 07:28:44.168159+00",
+      "archivedAt": "2026-09-30 20:06:16.209+00"
+    },
+    {
+      "id": "01a07fa0-525c-7389-89bf-52cce7317d86",
+      "type": "agentic",
+      "title": "Let's roleplay. I'm a person who died and was going to afterlife, but some spiritual wind blew me aw…",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 06:06:49.080392+00",
+      "updatedAt": "2026-09-08 06:07:12.939238+00",
+      "archivedAt": "2026-09-30 20:03:50.409+00"
+    },
+    {
+      "id": "01a07f61-e09b-7d48-9229-897a12f7e413",
+      "type": "agentic",
+      "title": "Let's do roleplay. I'm a piece of sugar cane that got sent 66 millions years ago",
+      "mode": "unknown",
+      "createdAt": "2026-09-08 04:58:36.719621+00",
+      "updatedAt": "2026-09-08 05:36:35.330047+00",
+      "archivedAt": "2026-09-30 20:04:08.03+00"
+    },
+    {
+      "id": "01a04f6d-5856-76a5-9550-d35772c9f851",
+      "type": "agentic",
+      "title": "Яндекс Игры. Think of game that would attract people and would be addictive (or at least they spent …",
+      "mode": "unknown",
+      "createdAt": "2026-08-29 21:29:22.08513+00",
+      "updatedAt": "2026-08-29 22:58:45.484676+00",
+      "archivedAt": "2026-09-30 20:04:14.255+00"
+    },
+    {
+      "id": "01a04f67-827d-73ff-b380-13f81d981b21",
+      "type": "evaluation",
+      "title": "An RP in Skyrim",
+      "mode": "direct-battle",
+      "createdAt": "2026-08-29 21:24:39.153+00",
+      "updatedAt": "2026-08-29 21:24:39.626617+00",
+      "archivedAt": "2026-09-30 20:04:24.216+00"
+    },
+    {
+      "id": "01a04f66-97fd-792b-b9ec-44c3825d07c7",
+      "type": "agentic",
+      "title": "Imagine this: A maze with closing doors. Rooms with bright lights closed and opened at the best. You…",
+      "mode": "unknown",
+      "createdAt": "2026-08-29 21:21:59.411758+00",
+      "updatedAt": "2026-08-29 21:22:22.038783+00",
+      "archivedAt": "2026-09-30 20:04:27.179+00"
+    },
+    {
+      "id": "019fcd02-572e-79a8-9d6d-b3df495d7660",
+      "type": "evaluation",
+      "title": "write out all reqruits that cost 3000 and lower. (format - number of town, possible chars)\n\nGriffin,",
+      "mode": "direct-battle",
+      "createdAt": "2026-08-04 13:47:22.615+00",
+      "updatedAt": "2026-08-04 13:56:45.802858+00",
+      "archivedAt": "2026-09-30 20:04:37.161+00"
+    },
+    {
+      "id": "019fcc50-1b05-7366-ac0f-557e81d10b06",
+      "type": "agentic",
+      "title": "look at map, read the text. write the best path between towns in order to meet all characters from l…",
+      "mode": "unknown",
+      "createdAt": "2026-08-04 10:27:11.650478+00",
+      "updatedAt": "2026-08-04 13:23:12.793276+00",
+      "archivedAt": "2026-09-30 20:04:47.242+00"
+    },
+    {
+      "id": "019fccd8-c680-7be5-b569-8268379e8e57",
+      "type": "evaluation",
+      "title": "write out free reqruits first. then with cost, but not higher than 2,999 (and the numbers of towns w",
+      "mode": "direct-battle",
+      "createdAt": "2026-08-04 12:57:41.857+00",
+      "updatedAt": "2026-08-04 13:03:16.957944+00",
+      "archivedAt": "2026-09-30 20:04:51.177+00"
+    },
+    {
+      "id": "019fccd3-fab9-7fad-b47e-cea5a10df0c8",
+      "type": "evaluation",
+      "title": "write out free reqruits first. then with cost, but not higher than 2,999\n\nAgnu/Free (Must free from ",
+      "mode": "direct-battle",
+      "createdAt": "2026-08-04 12:52:33.405+00",
+      "updatedAt": "2026-08-04 12:54:53.369274+00",
+      "archivedAt": "2026-09-30 20:05:10.776+00"
+    },
+    {
+      "id": "019fcc82-df3a-7d5f-bdad-8e86478346eb",
+      "type": "evaluation",
+      "title": "look at map, read the text. write the best path between towns in order to meet all characters from l",
+      "mode": "side-by-side",
+      "createdAt": "2026-08-04 11:23:09.919+00",
+      "updatedAt": "2026-08-04 11:23:10.938464+00",
+      "archivedAt": "2026-09-30 20:05:00.81+00"
+    },
+    {
+      "id": "019fcc7f-30f3-78bc-ae54-a9b8168ef358",
+      "type": "evaluation",
+      "title": "look at map, read the text. write the best path between towns in order to meet all characters from l",
+      "mode": "side-by-side",
+      "createdAt": "2026-08-04 11:19:44.095+00",
+      "updatedAt": "2026-08-04 11:19:44.800542+00",
+      "archivedAt": "2026-09-30 20:05:40.552+00"
+    },
+    {
+      "id": "019f8627-dc64-7ca9-953c-89af99d3810b",
+      "type": "evaluation",
+      "title": "So, I just spawned. What should I do first and where exactly?",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-21 19:31:38.004+00",
+      "updatedAt": "2026-07-21 19:31:39.001172+00",
+      "archivedAt": "2026-09-30 20:05:50.239+00"
+    },
+    {
+      "id": "019f861b-96b6-7031-95fc-d75160dde615",
+      "type": "evaluation",
+      "title": "So, I just spawned. What should I do first and where exactly?",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-21 19:18:26.291+00",
+      "updatedAt": "2026-07-21 19:18:27.751199+00",
+      "archivedAt": "2026-09-30 20:06:33.659+00"
+    },
+    {
+      "id": "019f608e-9c7f-7b15-be0b-4579400bc0c0",
+      "type": "evaluation",
+      "title": "look at map. i start in Hub. make me a path to find all characters (also pay attention to conditions",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 12:18:31.16+00",
+      "updatedAt": "2026-07-14 12:34:30.15224+00",
+      "archivedAt": "2026-09-30 20:07:23.123+00"
+    },
+    {
+      "id": "019f6098-9a00-73ea-8796-f1c617bea152",
+      "type": "evaluation",
+      "title": "look at this map. i numerated locations. im starting in Hub. i want to visit all locations",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 12:27:54.704+00",
+      "updatedAt": "2026-07-14 12:27:55.732868+00",
+      "archivedAt": "2026-09-30 20:12:43.418+00"
+    },
+    {
+      "id": "019f6089-fc1f-7f56-84b5-e13b876df90d",
+      "type": "evaluation",
+      "title": "Agnu/Free (Must free from a cage)/Tower of Abuse\nBard/3000/Bad Teeth, Blister Hill, Stack, Waystatio",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 12:12:17.083+00",
+      "updatedAt": "2026-07-14 12:13:24.931198+00",
+      "archivedAt": "2026-09-30 20:07:25.925+00"
+    },
+    {
+      "id": "019f5fdd-988e-7a32-a48d-969d49df1420",
+      "type": "evaluation",
+      "title": "Agnu/Free (Must free from a cage)/Tower of Abuse\nBard/3000/Bad Teeth, Blister Hill, Stack, Waystatio",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 09:03:54.101+00",
+      "updatedAt": "2026-07-14 09:03:54.816582+00",
+      "archivedAt": "2026-09-30 19:58:42.201+00"
+    },
+    {
+      "id": "019f5fc9-b689-7740-a421-ff31630023ed",
+      "type": "evaluation",
+      "title": "here's list of towns\n1. Bark\n2. Fishing Village\n3. Sho-Battai\n4. Burn's Tower\n5. Flotsam Village\n6. ",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 08:42:02.827+00",
+      "updatedAt": "2026-07-14 08:43:45.403178+00",
+      "archivedAt": "2026-09-30 19:58:39.756+00"
+    },
+    {
+      "id": "019f5fc1-ed06-73fb-a5eb-82d419a22723",
+      "type": "evaluation",
+      "title": "1. Bark\n2. Fishing Village\n3. Sho-Battai\n4. Burn's Tower\n5. Flotsam Village\n6. World's End\n7. Stoat\n",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-14 08:37:28.367+00",
+      "updatedAt": "2026-07-14 08:40:00.793067+00",
+      "archivedAt": "2026-09-30 20:07:36.124+00"
+    },
+    {
+      "id": "019f5d2e-77ef-7693-92c9-ee545bbd1b02",
+      "type": "evaluation",
+      "title": "look at dots number. how to numerate them more perfectly",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-13 20:33:39.662+00",
+      "updatedAt": "2026-07-13 20:33:40.563958+00",
+      "archivedAt": "2026-09-30 19:58:37.007+00"
+    },
+    {
+      "id": "019f5d26-d106-7c89-ba3a-103371dd0a35",
+      "type": "evaluation",
+      "title": "look how things were there (just look, don't analyse much yet)",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-13 20:25:15.53+00",
+      "updatedAt": "2026-07-13 20:27:52.172147+00",
+      "archivedAt": "2026-09-30 20:08:58.303+00"
+    },
+    {
+      "id": "019f57e1-88e0-7b8b-83f6-306a29276592",
+      "type": "evaluation",
+      "title": "look at this map. i numerated locations. im starting in Hub. i want to visit all locations",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-12 19:57:27.894+00",
+      "updatedAt": "2026-07-12 19:57:28.832775+00",
+      "archivedAt": "2026-09-30 20:12:51.939+00"
+    },
+    {
+      "id": "019f3d4f-f20f-7ca2-a33e-271df3985be8",
+      "type": "evaluation",
+      "title": "You know rimworld? If I want 3 pawns ideal for starting colony, what stats should they have? Without",
+      "mode": "direct-battle",
+      "createdAt": "2026-07-07 16:01:40.052+00",
+      "updatedAt": "2026-07-07 16:01:40.935587+00",
+      "archivedAt": "2026-09-30 20:08:26.248+00"
+    },
+    {
+      "id": "019f38d5-2c86-775a-9466-be9442098b76",
+      "type": "agentic",
+      "title": "i want you to give me tree rimworld pawns (only their attributes) ideal for any playthrough. stats s…",
+      "mode": "unknown",
+      "createdAt": "2026-07-06 19:08:43.694984+00",
+      "updatedAt": "2026-07-06 19:09:08.231365+00",
+      "archivedAt": "2026-09-30 20:08:17.603+00"
+    },
+    {
+      "id": "019ee550-421a-7fca-a90e-2fb01c2a71bb",
+      "type": "evaluation",
+      "title": "I am about to play the Sims 4, but I would like you to make all the decisions about my sim, eg, what",
+      "mode": "direct-battle",
+      "createdAt": "2026-06-20 14:01:23+00",
+      "updatedAt": "2026-06-20 14:01:24.252713+00",
+      "archivedAt": "2026-09-30 19:58:29.272+00"
+    },
+    {
+      "id": "019e8392-6cf0-74b1-9a43-0d05899c0106",
+      "type": "evaluation",
+      "title": "Перепиши всё",
+      "mode": "direct-battle",
+      "createdAt": "2026-06-01 14:25:06.203+00",
+      "updatedAt": "2026-06-01 14:25:07.262575+00",
+      "archivedAt": "2026-09-30 20:08:46.813+00"
+    },
+    {
+      "id": "019e4136-0a86-7be0-b94f-0ecd5b493362",
+      "type": "agentic",
+      "title": "I want to Roleplay with you. Like, I appear in Skyrim and start living here however I want",
+      "mode": "unknown",
+      "createdAt": "2026-05-19 17:08:41.579992+00",
+      "updatedAt": "2026-05-19 17:08:41.804381+00",
+      "archivedAt": "2026-09-30 20:12:54.556+00"
+    },
+    {
+      "id": "019e405f-6a79-7d23-aaa3-b701a1af60d8",
+      "type": "evaluation",
+      "title": "«全民冲水：我的马桶全知全能» (приблизительный перевод: «Глобальный смыв: мой унитаз всеведущ и всемогущ»)",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-19 13:14:32.097+00",
+      "updatedAt": "2026-05-19 13:14:32.694088+00",
+      "archivedAt": "2026-09-30 20:16:56.916+00"
+    },
+    {
+      "id": "019e3b79-5cff-78d4-8034-e27e8ff47157",
+      "type": "agentic",
+      "title": "Для чего ты полезен с чем не может справиться обычный чат gpt, или battle mode?",
+      "mode": "unknown",
+      "createdAt": "2026-05-18 14:24:30.351411+00",
+      "updatedAt": "2026-05-18 14:24:30.673369+00",
+      "archivedAt": "2026-09-30 20:08:37.216+00"
+    },
+    {
+      "id": "019e1db0-ff50-7122-94cb-afe92dc88675",
+      "type": "agentic",
+      "title": "what are you",
+      "mode": "unknown",
+      "createdAt": "2026-05-12 19:36:39.846612+00",
+      "updatedAt": "2026-05-12 19:36:40.290079+00",
+      "archivedAt": "2026-09-30 20:13:05.124+00"
+    },
+    {
+      "id": "019de7fb-e006-7189-8272-7fa4e8acf0ef",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 09:19:47.741+00",
+      "updatedAt": "2026-05-02 09:19:49.206555+00",
+      "archivedAt": "2026-09-30 20:09:07.107+00"
+    },
+    {
+      "id": "019de7b2-ba26-7307-8e50-7e885551316a",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:59:43.827+00",
+      "updatedAt": "2026-05-02 07:59:44.354055+00",
+      "archivedAt": "2026-09-30 20:09:14.921+00"
+    },
+    {
+      "id": "019de7ae-58d4-778f-9014-bafb382c173c",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:54:57.582+00",
+      "updatedAt": "2026-05-02 07:54:57.992282+00",
+      "archivedAt": "2026-09-30 20:12:23.607+00"
+    },
+    {
+      "id": "019de7ab-29c1-7d8d-90f8-91174a2c8758",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:51:19.749+00",
+      "updatedAt": "2026-05-02 07:51:20.485636+00",
+      "archivedAt": "2026-09-30 20:12:18.715+00"
+    },
+    {
+      "id": "019de7a9-3c07-7172-8889-c53284476182",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:49:24.84+00",
+      "updatedAt": "2026-05-02 07:49:25.501531+00",
+      "archivedAt": "2026-09-30 20:12:14.939+00"
+    },
+    {
+      "id": "019de7a7-539a-7e66-9740-42e9de226cd5",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:47:04.131+00",
+      "updatedAt": "2026-05-02 07:47:04.785586+00",
+      "archivedAt": "2026-09-30 20:11:55.801+00"
+    },
+    {
+      "id": "019de7a5-79d4-72b4-a525-31a18434b314",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:45:08.442+00",
+      "updatedAt": "2026-05-02 07:45:09.062206+00",
+      "archivedAt": "2026-09-30 20:12:03.752+00"
+    },
+    {
+      "id": "019de79f-8942-7c1b-a328-74616e9410d6",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:38:23.573+00",
+      "updatedAt": "2026-05-02 07:38:24.09247+00",
+      "archivedAt": "2026-09-30 20:12:17.922+00"
+    },
+    {
+      "id": "019de798-cd28-76e0-8c94-d1bd2ecdbe8d",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:31:24.475+00",
+      "updatedAt": "2026-05-02 07:31:25.114195+00",
+      "archivedAt": "2026-09-30 20:12:31.59+00"
+    },
+    {
+      "id": "019de793-9716-797c-b65b-1c03b6c7cc1c",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:25:26.803+00",
+      "updatedAt": "2026-05-02 07:25:27.381625+00",
+      "archivedAt": "2026-09-30 20:12:22.064+00"
+    },
+    {
+      "id": "019de78e-9a5f-744a-8483-9c100f68e0c5",
+      "type": "evaluation",
+      "title": "look at these personality traits. which 5 of them do you think could be the best/universal combinati",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:21:39.038+00",
+      "updatedAt": "2026-05-02 07:21:40.048018+00",
+      "archivedAt": "2026-09-30 20:17:05.389+00"
+    },
+    {
+      "id": "019de78c-f1da-78b3-94ff-be59beade7da",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:18:28.608+00",
+      "updatedAt": "2026-05-02 07:18:30.847888+00",
+      "archivedAt": "2026-09-30 20:13:14.583+00"
+    },
+    {
+      "id": "019de78a-2f4b-7cef-b8fb-8ecdf00e38ed",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:15:58.035+00",
+      "updatedAt": "2026-05-02 07:15:58.806822+00",
+      "archivedAt": "2026-09-30 20:13:22.821+00"
+    },
+    {
+      "id": "019de789-1b98-7b59-9f5b-439ce26f1f48",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:13:56.089+00",
+      "updatedAt": "2026-05-02 07:13:56.991503+00",
+      "archivedAt": "2026-09-30 20:13:27.162+00"
+    },
+    {
+      "id": "019de783-ee3e-71bc-ad68-68cefafcdebd",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-02 07:10:00.529+00",
+      "updatedAt": "2026-05-02 07:12:11.911046+00",
+      "archivedAt": "2026-09-30 20:13:47.993+00"
+    },
+    {
+      "id": "019de46c-e413-7a7a-a70a-23629b23dfce",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-01 16:45:37.994+00",
+      "updatedAt": "2026-05-02 06:58:01.125147+00",
+      "archivedAt": "2026-09-30 20:13:36.293+00"
+    },
+    {
+      "id": "019de50e-2d29-729d-a38a-e323e523dc2a",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-01 19:40:43.187+00",
+      "updatedAt": "2026-05-01 19:40:43.868023+00",
+      "archivedAt": "2026-09-30 20:13:58.412+00"
+    },
+    {
+      "id": "019de4ab-af8b-78d7-bd4c-14fa78c4b07f",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-01 17:54:01.426+00",
+      "updatedAt": "2026-05-01 17:54:02.201698+00",
+      "archivedAt": "2026-09-30 20:26:21.541+00"
+    },
+    {
+      "id": "019de494-3e97-7c57-a1b4-026e6ecc2008",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-01 17:27:27.719+00",
+      "updatedAt": "2026-05-01 17:27:30.189075+00",
+      "archivedAt": "2026-09-30 20:26:29.763+00"
+    },
+    {
+      "id": "019de476-2798-7ce9-9552-a57c44a2eb01",
+      "type": "evaluation",
+      "title": "look at these traits. which 5 of them do you think could be the best/universal combination for any k",
+      "mode": "direct-battle",
+      "createdAt": "2026-05-01 16:54:19.987+00",
+      "updatedAt": "2026-05-01 16:54:21.580112+00",
+      "archivedAt": "2026-09-30 20:14:15.699+00"
+    },
+    {
+      "id": "019dd956-5cce-73f6-bd59-a8bcf7461b7b",
+      "type": "evaluation",
+      "title": "Есть одна старая мобильная wap игра. Онлайна нет и она не открывается на новом телефоне. Можно ли ка",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-29 13:06:18.59+00",
+      "updatedAt": "2026-04-29 13:06:19.768671+00",
+      "archivedAt": "2026-09-30 20:14:27.586+00"
+    },
+    {
+      "id": "019dbfbc-33f9-7de7-afcc-71a83c1f7b47",
+      "type": "evaluation",
+      "title": "CK2 good custom dynasty name",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-24 13:45:05.707+00",
+      "updatedAt": "2026-04-24 13:45:06.762795+00",
+      "archivedAt": "2026-09-30 20:14:23.829+00"
+    },
+    {
+      "id": "019dbb5d-ba7a-7662-953c-f0529ef3a022",
+      "type": "evaluation",
+      "title": "I want Stardew Valley roleplay.",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-23 17:23:34.06+00",
+      "updatedAt": "2026-04-23 17:23:34.748731+00",
+      "archivedAt": "2026-09-30 20:18:23.087+00"
+    },
+    {
+      "id": "019da599-d029-7121-9770-a09b6a8f2a5f",
+      "type": "evaluation",
+      "title": "Ck2 good custom dynasty name",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-19 11:57:14.751+00",
+      "updatedAt": "2026-04-19 11:57:15.585008+00",
+      "archivedAt": "2026-09-30 20:14:45.507+00"
+    },
+    {
+      "id": "019d57ae-f4aa-7715-8d8c-6059217cd340",
+      "type": "evaluation",
+      "title": "look at this list. ck2 bloodlines. look at genders\n\nBritish Isles:\n  -  Caradog Catuvellauni (male)\n",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-04 08:51:33.007+00",
+      "updatedAt": "2026-04-04 09:42:28.037746+00",
+      "archivedAt": "2026-09-30 20:14:35.255+00"
+    },
+    {
+      "id": "019d4f03-0640-7b5c-9648-4968163d787e",
+      "type": "evaluation",
+      "title": "CK2. Suggest names to my councillors. Something not long, not importantly real ir serious. That I im",
+      "mode": "direct-battle",
+      "createdAt": "2026-04-02 16:25:56.073+00",
+      "updatedAt": "2026-04-02 16:47:21.61961+00",
+      "archivedAt": "2026-09-30 20:18:08.538+00"
+    },
+    {
+      "id": "019d4429-5c5b-7fa6-ad66-6d90add81b19",
+      "type": "evaluation",
+      "title": "look at this code. it's ck2. do you understand what's happening here?\n\n900400 = {\n\tname = \"Mirian_0\"",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-31 13:54:26.856+00",
+      "updatedAt": "2026-04-01 16:55:41.988874+00",
+      "archivedAt": "2026-09-30 20:14:59.65+00"
+    },
+    {
+      "id": "019d362d-b33a-78a7-b346-3d5bd36b2768",
+      "type": "evaluation",
+      "title": "look at this list of bloodlines in ck2. in the end there should be 256 bloodlines. each group has li",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 20:41:17.89+00",
+      "updatedAt": "2026-03-30 17:24:31.001297+00",
+      "archivedAt": "2026-09-30 20:18:04.298+00"
+    },
+    {
+      "id": "019d3dc7-8ddd-75b3-b9af-ceb9b8766374",
+      "type": "evaluation",
+      "title": "Hypothetical question. If Matilda Canossa, Enrico Dandolo, Bohemond (of Antioch ) Hauteville and Rog",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 08:06:29.063+00",
+      "updatedAt": "2026-03-30 08:06:30.249996+00",
+      "archivedAt": "2026-09-30 20:15:49.683+00"
+    },
+    {
+      "id": "019d3dc3-295b-7075-bb94-db7c4dd499f6",
+      "type": "evaluation",
+      "title": "Hypothetical question. If Matilda Canossa, Enrico Dandolo, Bohemond (of Antioch ) Hauteville and Rog",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 08:05:21.509+00",
+      "updatedAt": "2026-03-30 08:05:22.179451+00",
+      "archivedAt": "2026-09-30 20:18:01.451+00"
+    },
+    {
+      "id": "019d3dc0-1842-719d-9410-615a43186f62",
+      "type": "evaluation",
+      "title": "CK2 hypothetical question. If matilda canossa, enrico dandolo, bohemond (of Antioch ) and roger (of ",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 07:59:49.063+00",
+      "updatedAt": "2026-03-30 07:59:49.630933+00",
+      "archivedAt": "2026-09-30 20:14:56.851+00"
+    },
+    {
+      "id": "019d3dbf-530d-7fe1-87e4-a1a9add5d767",
+      "type": "evaluation",
+      "title": "CK2 hypothetical question. If matilda canossa, enrico dandolo, bohemond and roger hauteville's, live",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 07:57:29.681+00",
+      "updatedAt": "2026-03-30 07:57:30.285246+00",
+      "archivedAt": "2026-09-30 20:15:56.054+00"
+    },
+    {
+      "id": "019d3dbf-28ec-7c7a-bbae-0503f5616749",
+      "type": "evaluation",
+      "title": "CK2 hypothetical question. If matilda canossa, enrico dandolo, bohemond and roger hauteville's, live",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 07:57:16.303+00",
+      "updatedAt": "2026-03-30 07:57:17.070144+00",
+      "archivedAt": "2026-09-30 20:26:26.102+00"
+    },
+    {
+      "id": "019d3dbe-8edf-7796-bdfb-176340fce872",
+      "type": "evaluation",
+      "title": "CK2 hypothetical question. If matilda canossa, enrico dandolo, bohemond and roger hauteville's, live",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-30 07:56:52.582+00",
+      "updatedAt": "2026-03-30 07:56:53.175377+00",
+      "archivedAt": "2026-09-30 20:16:12.223+00"
+    },
+    {
+      "id": "019d361a-7501-788c-aa06-fc6ec583c4b4",
+      "type": "evaluation",
+      "title": "look at this list of bloodlines in ck2. in the end there should be 256 bloodlines. each group has li",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 20:20:14.536+00",
+      "updatedAt": "2026-03-28 20:28:33.729535+00",
+      "archivedAt": "2026-09-30 20:18:16.904+00"
+    },
+    {
+      "id": "019d35f5-4de9-74a7-b727-5e607bd50961",
+      "type": "evaluation",
+      "title": "look at this list of bloodlines in ck2. in the end there should be 256 bloodlines. each group has li",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 19:42:10.421+00",
+      "updatedAt": "2026-03-28 20:11:08.721334+00",
+      "archivedAt": "2026-09-30 20:16:03.218+00"
+    },
+    {
+      "id": "019d35c1-7ca4-780d-a002-6df17697d84e",
+      "type": "evaluation",
+      "title": "look at this list of bloodlines in ck2. see that each group has limit of bloodlines. tell how much m",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 18:43:56.807+00",
+      "updatedAt": "2026-03-28 19:18:03.258917+00",
+      "archivedAt": "2026-09-30 20:26:34.892+00"
+    },
+    {
+      "id": "019d34a3-4d7f-7f01-b1f8-fa86ce8b2500",
+      "type": "evaluation",
+      "title": "look at this list of bloodline founders in ck2. what do you think? do you have questions/arguments/s",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 13:43:24.507+00",
+      "updatedAt": "2026-03-28 17:11:06.643248+00",
+      "archivedAt": "2026-09-30 20:16:44.154+00"
+    },
+    {
+      "id": "019d3429-6872-72b2-b31d-4700a2cfad90",
+      "type": "evaluation",
+      "title": "look at this list and how i grouped bloodlines (ck2 game)\nBritish Isles:\n  -  Caradog Catuvellauni (",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 11:18:12.801+00",
+      "updatedAt": "2026-03-28 12:22:04.010995+00",
+      "archivedAt": "2026-09-30 20:16:16.114+00"
+    },
+    {
+      "id": "019d3411-fa42-7727-aeb6-6f92ffc89cd0",
+      "type": "evaluation",
+      "title": "imagine medieval world. there are empires - britain, spain, hre, italy, france. they have \"value\" - ",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 11:02:03.621+00",
+      "updatedAt": "2026-03-28 11:06:07.084914+00",
+      "archivedAt": "2026-09-30 20:18:31.329+00"
+    },
+    {
+      "id": "019d33db-85d7-7110-888f-609b3cb0c75c",
+      "type": "evaluation",
+      "title": "look at this list of bloodline founders from CK2. HOW WOULD YOU SUGGEST GROUPING THEM geographically",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 09:53:34.198+00",
+      "updatedAt": "2026-03-28 10:47:41.773472+00",
+      "archivedAt": "2026-09-30 20:16:24.165+00"
+    },
+    {
+      "id": "019d33a8-22cf-74b0-980c-5f4d7eae68ab",
+      "type": "evaluation",
+      "title": "look at this list of CK2 bloodlines\nBritish Isles:\nCaradog Catuvellauni (male)\nGwrtheyrn Gwerthrynio",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 08:56:23.869+00",
+      "updatedAt": "2026-03-28 09:42:33.157189+00",
+      "archivedAt": "2026-09-30 20:26:40.836+00"
+    },
+    {
+      "id": "019d33a1-e334-7b05-a9ba-a6e792be9484",
+      "type": "evaluation",
+      "title": "have a look at this\nBritish Isles:\n  -  Caradog Catuvellauni (male)\n  -  Gwrtheyrn Gwerthrynion (mal",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-28 08:49:36.905+00",
+      "updatedAt": "2026-03-28 08:49:37.771537+00",
+      "archivedAt": "2026-09-30 20:22:25.403+00"
+    },
+    {
+      "id": "019d1af8-c247-791a-8e30-624ee28aba57",
+      "type": "evaluation",
+      "title": "lool at these traits from ck2\n\nvarangian = {\n\tmartial = 2\n\tdiplomacy = 1\n\tcombat_rating = 10\n}\n\npira",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-23 14:47:32.141+00",
+      "updatedAt": "2026-03-23 15:08:21.572932+00",
+      "archivedAt": "2026-09-30 20:22:28.573+00"
+    },
+    {
+      "id": "019d1b13-7f9b-70df-bac1-8c470cff90de",
+      "type": "evaluation",
+      "title": "lool at these traits from ck2\n\nbrawny = {\n\tmartial = 2\n\tdiplomacy = 1\n\thealth = 1\n\tcombat_rating = 1",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-23 14:24:51.278+00",
+      "updatedAt": "2026-03-23 14:34:06.393901+00",
+      "archivedAt": "2026-09-30 20:22:36.052+00"
+    },
+    {
+      "id": "019d164b-9cde-7ca8-8111-7c8f9a948a73",
+      "type": "evaluation",
+      "title": "CK2. Suggest names to my councillors. Something not long, not importantly real ir serious. That I im",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-22 16:09:33.21+00",
+      "updatedAt": "2026-03-22 16:13:05.473826+00",
+      "archivedAt": "2026-09-30 20:22:40.692+00"
+    },
+    {
+      "id": "019d1644-9345-7cd9-a344-c3b196a27c28",
+      "type": "evaluation",
+      "title": "Ck2. Give names for councillors. But they should be universal for every religion/culture - so i easi",
+      "mode": "battle",
+      "createdAt": "2026-03-22 16:00:25.156+00",
+      "updatedAt": "2026-03-22 16:01:31.789732+00",
+      "archivedAt": "2026-09-30 20:19:30.855+00"
+    },
+    {
+      "id": "019d109c-22b0-71b2-8076-5d3c2aff50e6",
+      "type": "evaluation",
+      "title": "\"Spore\" game simulator. Roleplay RPG. Beginning.",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 13:36:32.477+00",
+      "updatedAt": "2026-03-21 13:36:32.946623+00",
+      "archivedAt": "2026-09-30 20:19:44.687+00"
+    },
+    {
+      "id": "019d1063-bc95-75e0-b381-b27361edd2c4",
+      "type": "evaluation",
+      "title": "\"Spore\" game simulator. Roleplay RPG. Beginning.",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 12:34:32.346+00",
+      "updatedAt": "2026-03-21 12:48:16.747444+00",
+      "archivedAt": "2026-09-30 20:19:36.952+00"
+    },
+    {
+      "id": "019d1044-4d83-7826-bda2-9f4ccf0d175c",
+      "type": "evaluation",
+      "title": "\"Spore\" game simulator. Roleplay RPG. Beginning.",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 12:00:55.367+00",
+      "updatedAt": "2026-03-21 12:31:29.363338+00",
+      "archivedAt": "2026-09-30 20:19:49.709+00"
+    },
+    {
+      "id": "019d1008-3095-780f-917d-07218a72fba7",
+      "type": "evaluation",
+      "title": "lool at these traits from ck2\n\nbrawny = {\n\tmartial = 2\n\tdiplomacy = 1\n\thealth = 1\n\tcombat_rating = 1",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 11:49:18.798+00",
+      "updatedAt": "2026-03-21 12:09:27.783383+00",
+      "archivedAt": "2026-09-30 20:22:48.332+00"
+    },
+    {
+      "id": "019d100d-c7ee-7191-83e6-311b7f99a86f",
+      "type": "evaluation",
+      "title": "\"Spore\" game simulator. Roleplay RPG. Beginning. Stages progress in small steps (not from cell to an",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 11:00:47.459+00",
+      "updatedAt": "2026-03-21 11:55:22.996919+00",
+      "archivedAt": "2026-09-30 20:20:31.568+00"
+    },
+    {
+      "id": "019d0f60-c00f-7498-b147-8567cca390c1",
+      "type": "evaluation",
+      "title": "Roleplay rpg Spore game simulator. Beginning. Keep in mind that I want stages to progress in smalles",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 07:52:08.809+00",
+      "updatedAt": "2026-03-21 07:52:09.43694+00",
+      "archivedAt": "2026-09-30 20:20:20.303+00"
+    },
+    {
+      "id": "019d0f2f-0a4f-7acc-8033-5e4ebab9772c",
+      "type": "evaluation",
+      "title": "Roleplay rpg Spore game simulator. Beginning. Keep in mind that I want stages to progress in smalles",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 06:57:36.012+00",
+      "updatedAt": "2026-03-21 07:45:42.662177+00",
+      "archivedAt": "2026-09-30 20:20:35.255+00"
+    },
+    {
+      "id": "019d0f20-b0ad-7325-8d75-bdd37a30c1e6",
+      "type": "evaluation",
+      "title": "Какая европейская славянская страна очень националистичная, но любит русских? *Language Raw, direct,",
+      "mode": "direct-battle",
+      "createdAt": "2026-03-21 06:43:21.297+00",
+      "updatedAt": "2026-03-21 07:16:06.730229+00",
+      "archivedAt": "2026-09-30 20:20:42.506+00"
+    },
+    {
+      "id": "019c7572-629f-70ec-8746-693cfab1d7a7",
+      "type": "evaluation",
+      "title": "CK2. Choose year, dynasty, and write the course of its progression. Like AAR but with less literatur",
+      "mode": "direct-battle",
+      "createdAt": "2026-02-19 10:31:13.861+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:20:47.599+00"
+    },
+    {
+      "id": "019c756c-1ba0-7bb8-8482-f7ee689f0e08",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing rising dynasty, arranging marriages all across the globe. Sometimes logi",
+      "mode": "direct-battle",
+      "createdAt": "2026-02-19 10:24:44.72+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:20:56.147+00"
+    },
+    {
+      "id": "019bc3bf-4a94-7041-92ac-f8cf0e19f6bb",
+      "type": "evaluation",
+      "title": "Let's roleplay. Medieval fantasy world. I'm Ray, 18, and I want advenures - being a knight, fighting",
+      "mode": "direct",
+      "createdAt": "2026-01-15 22:21:41.739+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:20:59.897+00"
+    },
+    {
+      "id": "019ba927-f380-7402-abbb-df09a3211209",
+      "type": "evaluation",
+      "title": "Симбионт и вирус Алекса мерсера, чем похожи?",
+      "mode": "direct",
+      "createdAt": "2026-01-10 18:26:05.782+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:03.389+00"
+    },
+    {
+      "id": "019b9db5-effc-775a-bc79-72727604c134",
+      "type": "evaluation",
+      "title": "In CK2 i want to create 7 custom bloodlines. Give ideas in different directions.",
+      "mode": "direct",
+      "createdAt": "2026-01-08 13:06:39.606+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:11.18+00"
+    },
+    {
+      "id": "019b7ee3-531c-7c9c-a928-e563d2d505bd",
+      "type": "evaluation",
+      "title": "Roleplay, simulator of getting the highest in Mafia. I'm Ray, 14 (I don't know about Mafia. I'm not ",
+      "mode": "direct",
+      "createdAt": "2026-01-02 13:28:20.452+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:15.206+00"
+    },
+    {
+      "id": "019b7ed7-7c65-7b8d-99f8-4c89bc9da27b",
+      "type": "evaluation",
+      "title": "Roleplay, simulator of getting the highest in Mafia. I'm Ray, 14. Set in Italy.",
+      "mode": "direct",
+      "createdAt": "2026-01-02 13:16:35.184+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:23.063+00"
+    },
+    {
+      "id": "019b7ec1-0375-76f7-ab63-9d0266c1bf44",
+      "type": "evaluation",
+      "title": "Roleplay set in \"Shrek\" before the 1 chapter. (Start NOT near Shrek's swamp)",
+      "mode": "direct",
+      "createdAt": "2026-01-02 12:49:13.772+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:26.934+00"
+    },
+    {
+      "id": "019b7ebd-edee-7e85-ae93-2e08c7ae3be7",
+      "type": "evaluation",
+      "title": "Cult simulator",
+      "mode": "direct",
+      "createdAt": "2026-01-02 12:45:57.828+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:34.121+00"
+    },
+    {
+      "id": "019b7ad0-952a-7cd8-873d-3e15c95d94bb",
+      "type": "evaluation",
+      "title": "Narrate. Desperate single lonely virgin office lady Linda (36). Her day off. Real dating is disappoi",
+      "mode": "direct",
+      "createdAt": "2026-01-01 18:28:24.602+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:37.387+00"
+    },
+    {
+      "id": "019b79dd-a7fc-72a1-b7c7-14c8a4127693",
+      "type": "evaluation",
+      "title": "Roleplay set in \"Shrek\" before the 1 chapter. (Start NOT near Shrek's swamp)",
+      "mode": "direct",
+      "createdAt": "2026-01-01 14:02:53.158+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:45.651+00"
+    },
+    {
+      "id": "019b7696-f229-733e-8319-534037690110",
+      "type": "evaluation",
+      "title": "Roleplay set in \"Shrek\" before the 1 chapter. (Start NOT near the swamp)",
+      "mode": "direct",
+      "createdAt": "2025-12-31 22:46:40.598+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:49.125+00"
+    },
+    {
+      "id": "019b7561-e1e0-7ead-beb1-30f12831ae3b",
+      "type": "evaluation",
+      "title": "Roleplay set in \"Shrek\" (before the 1 chapter started)",
+      "mode": "direct",
+      "createdAt": "2025-12-31 17:08:53.249+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:21:58.912+00"
+    },
+    {
+      "id": "019b74f7-5de4-7990-ac45-00f95d64c37c",
+      "type": "evaluation",
+      "title": "Roleplay set in \"Shrek\"",
+      "mode": "direct",
+      "createdAt": "2025-12-31 15:13:17.695+00",
+      "updatedAt": "2026-03-11 04:23:37.146191+00",
+      "archivedAt": "2026-09-30 20:22:08.957+00"
+    },
+    {
+      "id": "019c84f0-8981-7824-8a20-a1c53fd747b7",
+      "type": "evaluation",
+      "title": "sort by ids\n900100 = {\n\tname = \"Caradog_0\"\n\tdynasty = 105920\n\treligion = pagan\n\tculture = welsh\n\t1.1",
+      "mode": "direct",
+      "createdAt": "2026-02-22 10:41:43.999+00",
+      "updatedAt": "2026-02-22 10:41:44.575164+00",
+      "archivedAt": "2026-09-30 20:26:45.237+00"
+    },
+    {
+      "id": "019c84cf-70d0-76b0-969e-9a3cec8afe9f",
+      "type": "evaluation",
+      "title": "sort by ids\n\n900200 = {\n\tname = \"Erdewan_0\"\n\tdynasty = 1029098\n\treligion = zoroastrian\n\tculture = ku",
+      "mode": "direct",
+      "createdAt": "2026-02-22 10:05:25.569+00",
+      "updatedAt": "2026-02-22 10:05:26.013332+00",
+      "archivedAt": "2026-09-30 20:22:51.936+00"
+    },
+    {
+      "id": "019c84cb-7ea0-73c1-930b-250a5c8ae3d9",
+      "type": "evaluation",
+      "title": "sort by ids\n\n908600 = {\n\tname = \"Defender_0\"\n\tfemale = yes\n\tdynasty = 908600\n\treligion = miaphysite\n",
+      "mode": "direct",
+      "createdAt": "2026-02-22 10:01:05.502+00",
+      "updatedAt": "2026-02-22 10:01:05.986999+00",
+      "archivedAt": "2026-09-30 20:26:49.365+00"
+    },
+    {
+      "id": "019c84c9-aedd-7d4f-bad6-794d932d1745",
+      "type": "evaluation",
+      "title": "sort by ids\n\n902300 = {\n\tname = \"Sa'id_0\"\n\tdynasty = 12279\n\treligion = qarmatian\n\tculture = bedouin\n",
+      "mode": "direct",
+      "createdAt": "2026-02-22 09:59:25.524+00",
+      "updatedAt": "2026-02-22 09:59:25.941858+00",
+      "archivedAt": "2026-09-30 20:27:02.429+00"
+    },
+    {
+      "id": "019c84bc-2ac7-79c6-9e29-ae50d08b7ff5",
+      "type": "evaluation",
+      "title": "901700 = {\n\tname = \"Rurik_0\"\n\tdynasty = 705\n\treligion = norse_pagan\n\tculture = norse\n\t1.1.1 = {\n\t\tbi",
+      "mode": "direct",
+      "createdAt": "2026-02-22 09:52:27.774+00",
+      "updatedAt": "2026-02-22 09:56:51.122523+00",
+      "archivedAt": "2026-09-30 20:27:04.952+00"
+    },
+    {
+      "id": "019c84b2-07ee-73ad-9c25-5d676da111b7",
+      "type": "evaluation",
+      "title": "sort by ids\n\n902500 = {\n\tname = \"Rudolf_0\"\n\tdynasty = 650\n\treligion = catholic\n\tculture = german\n\t1.",
+      "mode": "direct",
+      "createdAt": "2026-02-22 09:34:42.015+00",
+      "updatedAt": "2026-02-22 09:34:42.419676+00",
+      "archivedAt": "2026-09-30 20:27:08.478+00"
+    },
+    {
+      "id": "019c81b8-986f-7f9b-aec6-c33e25b6f0c0",
+      "type": "evaluation",
+      "title": "sort by ids\n\n900800 = {\n\tname = \"Merovech_0\"\n\tdynasty = 542\n\treligion = norse_pagan\n\tculture = frank",
+      "mode": "direct",
+      "createdAt": "2026-02-21 19:41:57.092+00",
+      "updatedAt": "2026-02-21 19:41:57.912451+00",
+      "archivedAt": "2026-09-30 20:27:13.335+00"
+    },
+    {
+      "id": "019c81a5-10aa-7229-aef6-600dd396403d",
+      "type": "evaluation",
+      "title": "sort by ids\n\n900100 = {\n\tname = \"Caradog_0\"\n\tdynasty = 105920\n\treligion = pagan\n\tculture = welsh\n\t1.",
+      "mode": "direct",
+      "createdAt": "2026-02-21 19:22:56.139+00",
+      "updatedAt": "2026-02-21 19:22:56.632718+00",
+      "archivedAt": "2026-09-30 20:27:16.636+00"
+    },
+    {
+      "id": "019c8040-2695-7172-84cd-1bb9ac3b77b5",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:50:28.173+00",
+      "updatedAt": "2026-02-21 12:50:28.657704+00",
+      "archivedAt": "2026-09-30 20:27:19.769+00"
+    },
+    {
+      "id": "019c803d-ed07-750f-afd9-3a304e9a88df",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:47:59.743+00",
+      "updatedAt": "2026-02-21 12:48:00.151051+00",
+      "archivedAt": "2026-09-30 20:27:23.972+00"
+    },
+    {
+      "id": "019c803c-7874-7231-a405-44ecadf3a5b6",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:46:19.304+00",
+      "updatedAt": "2026-02-21 12:46:19.858209+00",
+      "archivedAt": "2026-09-30 20:27:32.536+00"
+    },
+    {
+      "id": "019c803a-1c08-765b-97f6-074abab7b5d3",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:43:54.11+00",
+      "updatedAt": "2026-02-21 12:43:54.84522+00",
+      "archivedAt": "2026-09-30 20:27:35.498+00"
+    },
+    {
+      "id": "019c8038-0a05-77a1-9f89-25669cedd125",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:41:45.319+00",
+      "updatedAt": "2026-02-21 12:41:45.845149+00",
+      "archivedAt": "2026-09-30 20:27:36.656+00"
+    },
+    {
+      "id": "019c8034-69db-72a1-91f5-4b487caa80f7",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:39:17.825+00",
+      "updatedAt": "2026-02-21 12:39:18.241109+00",
+      "archivedAt": "2026-09-30 20:27:38.927+00"
+    },
+    {
+      "id": "019c8031-f160-76ec-957c-23f80c94b847",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:35:10.123+00",
+      "updatedAt": "2026-02-21 12:35:10.606686+00",
+      "archivedAt": "2026-09-30 20:27:41.587+00"
+    },
+    {
+      "id": "019c802a-de31-783d-b122-da34e9223875",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:28:13.202+00",
+      "updatedAt": "2026-02-21 12:28:13.699489+00",
+      "archivedAt": "2026-09-30 20:29:20.037+00"
+    },
+    {
+      "id": "019c8028-7998-7634-8cdc-8efbc7f94e1d",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:25:05.823+00",
+      "updatedAt": "2026-02-21 12:25:06.23449+00",
+      "archivedAt": "2026-09-30 20:29:22.071+00"
+    },
+    {
+      "id": "019c8024-e0cf-7b96-9fec-711e5003892d",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:22:22.789+00",
+      "updatedAt": "2026-02-21 12:22:23.174775+00",
+      "archivedAt": "2026-09-30 20:29:24.427+00"
+    },
+    {
+      "id": "019c8022-32c6-7934-bc02-862fd3d5d0a9",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:17:45.93+00",
+      "updatedAt": "2026-02-21 12:17:47.830185+00",
+      "archivedAt": "2026-09-30 20:29:26.326+00"
+    },
+    {
+      "id": "019c8020-842f-739a-806a-19509253d6c6",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 12:15:46.701+00",
+      "updatedAt": "2026-02-21 12:15:48.206111+00",
+      "archivedAt": "2026-09-30 20:29:29.926+00"
+    },
+    {
+      "id": "019c7fc9-70f2-748e-b27f-92d6a1063cb3",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:40:40.143+00",
+      "updatedAt": "2026-02-21 10:40:40.596192+00",
+      "archivedAt": "2026-09-30 20:27:44.319+00"
+    },
+    {
+      "id": "019c7fc6-8df4-7b30-963a-5384e06db2af",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:38:22.039+00",
+      "updatedAt": "2026-02-21 10:38:22.571817+00",
+      "archivedAt": "2026-09-30 20:29:31.116+00"
+    },
+    {
+      "id": "019c7fc4-d745-7b5d-95b3-539801f4a2e6",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:35:42.606+00",
+      "updatedAt": "2026-02-21 10:35:42.923802+00",
+      "archivedAt": "2026-09-30 20:29:33.832+00"
+    },
+    {
+      "id": "019c7fb8-7964-794b-849c-ae05f9d04360",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:22:22.206+00",
+      "updatedAt": "2026-02-21 10:22:22.621326+00",
+      "archivedAt": "2026-09-30 20:27:46.321+00"
+    },
+    {
+      "id": "019c7fb5-759e-7d1c-816e-276ca4f606c2",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:18:49.605+00",
+      "updatedAt": "2026-02-21 10:18:50.115602+00",
+      "archivedAt": "2026-09-30 20:29:37.021+00"
+    },
+    {
+      "id": "019c7fb2-2a35-738c-b88e-47cfb2d3d7af",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:15:31.643+00",
+      "updatedAt": "2026-02-21 10:15:32.287682+00",
+      "archivedAt": "2026-09-30 20:29:39.109+00"
+    },
+    {
+      "id": "019c7fab-ec4b-7e77-a405-2ebab7c9b25b",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:08:28.222+00",
+      "updatedAt": "2026-02-21 10:08:28.691769+00",
+      "archivedAt": "2026-09-30 20:27:52.087+00"
+    },
+    {
+      "id": "019c7f76-044f-7542-ae9b-e3e2136bcc82",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 10:02:46.382+00",
+      "updatedAt": "2026-02-21 10:02:46.791384+00",
+      "archivedAt": "2026-09-30 20:27:49.431+00"
+    },
+    {
+      "id": "019c7f6b-7b5e-7a76-834b-19c6b7c5db8e",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 09:03:50.787+00",
+      "updatedAt": "2026-02-21 09:03:51.406686+00",
+      "archivedAt": "2026-09-30 20:27:53.88+00"
+    },
+    {
+      "id": "019c7f5a-4c46-72ef-b760-85432b4917d1",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 08:39:16.603+00",
+      "updatedAt": "2026-02-21 08:39:17.058618+00",
+      "archivedAt": "2026-09-30 20:27:55.626+00"
+    },
+    {
+      "id": "019c7f54-9179-73a4-8582-ed85b3b3029b",
+      "type": "evaluation",
+      "title": "copy chars with id ending with 00 and 01 in two separate lists. third list should contain everything",
+      "mode": "direct",
+      "createdAt": "2026-02-21 08:34:06.99+00",
+      "updatedAt": "2026-02-21 08:34:07.482762+00",
+      "archivedAt": "2026-09-30 20:27:59.119+00"
+    },
+    {
+      "id": "019c7f49-f44c-7a46-8038-7d3db5a4051a",
+      "type": "evaluation",
+      "title": "read. write \"read\" in answer\n\n900100 = {\n\tname = \"Caradog_0\"\n\tdynasty = 105920\n\treligion = pagan\n\tcu",
+      "mode": "direct",
+      "createdAt": "2026-02-21 08:24:17.927+00",
+      "updatedAt": "2026-02-21 08:27:16.380549+00",
+      "archivedAt": "2026-09-30 20:28:00.138+00"
+    },
+    {
+      "id": "019c7c80-d127-7ad3-b3be-3c33a5e39d4e",
+      "type": "evaluation",
+      "title": "посмотри. напиши только \"прочитал\" в ответе\n\nБородино\n\n— Скажи-ка, дядя, ведь не даром\nМосква, спале",
+      "mode": "direct-battle",
+      "createdAt": "2026-02-20 19:23:16.63+00",
+      "updatedAt": "2026-02-21 08:12:44.268495+00",
+      "archivedAt": "2026-09-30 20:28:04.192+00"
+    },
+    {
+      "id": "019c7c58-bdc5-70f1-b13c-2e9acd294e68",
+      "type": "evaluation",
+      "title": "delete char lists with id ending with 00 and 01\n\n911302 = {\n\tname = \"Defender_2\"\n\tdynasty = 911300\n\t",
+      "mode": "direct-battle",
+      "createdAt": "2026-02-20 18:39:19.838+00",
+      "updatedAt": "2026-02-20 18:39:20.499563+00",
+      "archivedAt": "2026-09-30 20:28:06.738+00"
+    },
+    {
+      "id": "019c7b9a-3e11-79f0-883e-d0beab77bfb1",
+      "type": "evaluation",
+      "title": "copy only char lists with birth in 1.1.1\n\n911302 = {\n\tname = \"Defender_2\"\n\tdynasty = 911300\n\treligio",
+      "mode": "direct-battle",
+      "createdAt": "2026-02-20 15:12:39.138+00",
+      "updatedAt": "2026-02-20 18:30:09.791162+00",
+      "archivedAt": "2026-09-30 20:28:09.371+00"
+    },
+    {
+      "id": "019c4d8d-2b7c-7e21-b2dd-6e51b1f13233",
+      "type": "evaluation",
+      "title": "Middle-aged ofiice lady. Single mother of 16 year old girl. her day. *woman's pov with inner words t",
+      "mode": "direct",
+      "createdAt": "2026-02-11 16:40:04.372+00",
+      "updatedAt": "2026-02-11 16:40:05.048689+00",
+      "archivedAt": "2026-09-30 20:29:40.052+00"
+    },
+    {
+      "id": "019c4d6d-018e-726e-97c4-1be1339284e8",
+      "type": "evaluation",
+      "title": "Посмтори на текст ниже. просто прочитай. Пиши \"прочитал\" как ответ.\n\nЛитстрим по Crusader Kings II. ",
+      "mode": "direct",
+      "createdAt": "2026-02-11 16:03:13.723+00",
+      "updatedAt": "2026-02-11 16:18:37.044337+00",
+      "archivedAt": "2026-09-30 20:29:41.96+00"
+    },
+    {
+      "id": "019c48c9-f955-7b04-a532-8bf9b810b623",
+      "type": "evaluation",
+      "title": "Посмтори на текст ниже. просто прочитай. Пиши \"прочитал\" как ответ.",
+      "mode": "direct",
+      "createdAt": "2026-02-10 18:22:40.222+00",
+      "updatedAt": "2026-02-11 15:40:49.056677+00",
+      "archivedAt": "2026-09-30 20:29:44.824+00"
+    },
+    {
+      "id": "019c48a0-9b73-70e8-86f7-25711df52299",
+      "type": "evaluation",
+      "title": "Посмтори на текст ниже. просто прочитай. пиши \"прочитал\" как ответ\n\nЛитстрим по Crusader Kings II. И",
+      "mode": "direct",
+      "createdAt": "2026-02-10 17:40:32.551+00",
+      "updatedAt": "2026-02-10 18:00:46.826771+00",
+      "archivedAt": "2026-09-30 19:56:50.016+00"
+    },
+    {
+      "id": "019c488d-bfb4-713f-80f0-fbfc984fa213",
+      "type": "evaluation",
+      "title": "write AAR in game of CK2. half literature, half thoughts of player. beginning. don't rush",
+      "mode": "direct",
+      "createdAt": "2026-02-10 17:17:32.321+00",
+      "updatedAt": "2026-02-10 17:17:32.723548+00",
+      "archivedAt": "2026-09-30 20:29:46.2+00"
+    },
+    {
+      "id": "019c4886-3afb-726b-9a04-213cf0984368",
+      "type": "evaluation",
+      "title": "write лит-стрим or, how it's better known, AAR in game of CK2. but not too much of literature",
+      "mode": "direct",
+      "createdAt": "2026-02-10 17:11:28.345+00",
+      "updatedAt": "2026-02-10 17:11:30.160166+00",
+      "archivedAt": "2026-09-30 19:56:40.936+00"
+    },
+    {
+      "id": "019c4848-c195-7ae0-9040-c9ecdd2ebec5",
+      "type": "evaluation",
+      "title": "narrate typical session in ck2. the beginning",
+      "mode": "direct",
+      "createdAt": "2026-02-10 16:58:25.181+00",
+      "updatedAt": "2026-02-10 16:58:25.54171+00",
+      "archivedAt": "2026-09-30 20:29:48.217+00"
+    },
+    {
+      "id": "019c432d-35b7-72f5-8127-895fddf2b2e0",
+      "type": "evaluation",
+      "title": "in ck2 give ideas which dynasty/duchy to chose, to then form Archduchy",
+      "mode": "direct",
+      "createdAt": "2026-02-09 16:13:37.285+00",
+      "updatedAt": "2026-02-10 15:15:27.925312+00",
+      "archivedAt": "2026-09-30 20:29:54.3+00"
+    },
+    {
+      "id": "019c432b-3415-77c8-98d8-0b2ea265c9cf",
+      "type": "evaluation",
+      "title": "you know how ck2 players are obsessed with collecting bloodlines, right? how about giving such playe",
+      "mode": "direct",
+      "createdAt": "2026-02-09 16:10:40.441+00",
+      "updatedAt": "2026-02-09 16:10:41.125628+00",
+      "archivedAt": "2026-09-30 19:56:37.221+00"
+    },
+    {
+      "id": "019c4323-cbf3-7648-bf96-c1ae90af38cf",
+      "type": "evaluation",
+      "title": "you know how ck2 players are obsessed with collecting bloodlines, right?",
+      "mode": "direct",
+      "createdAt": "2026-02-09 16:02:55.097+00",
+      "updatedAt": "2026-02-09 16:05:39.465387+00",
+      "archivedAt": "2026-09-30 20:30:37.884+00"
+    },
+    {
+      "id": "019c4315-afd0-7b86-9f2f-d5eb25264ef9",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing rising dynasty of CK2 player, who likes to collect bloodlines through ma",
+      "mode": "direct",
+      "createdAt": "2026-02-09 15:53:01.517+00",
+      "updatedAt": "2026-02-09 15:53:01.90252+00",
+      "archivedAt": "2026-09-30 20:30:20.856+00"
+    },
+    {
+      "id": "019c4302-8d0b-7469-b351-a0697a29eb5a",
+      "type": "evaluation",
+      "title": "narrate world's pov seeing dynasty of ck2 player, who likes to collect bloodlines through marriages ",
+      "mode": "direct",
+      "createdAt": "2026-02-09 15:26:18.889+00",
+      "updatedAt": "2026-02-09 15:26:20.08151+00",
+      "archivedAt": "2026-09-30 19:56:32.514+00"
+    },
+    {
+      "id": "019c42fa-ccd0-7269-99c6-4dc0b1272fca",
+      "type": "evaluation",
+      "title": "narrate world's pov seeing dynasty of ck2 player, who likes to collect bloodlines through marriages ",
+      "mode": "direct",
+      "createdAt": "2026-02-09 15:20:44.229+00",
+      "updatedAt": "2026-02-09 15:20:44.631088+00",
+      "archivedAt": "2026-09-30 19:56:45.353+00"
+    },
+    {
+      "id": "019c42dc-5ca0-7646-9f78-c6dacfe7d870",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all arond the globe. Wit",
+      "mode": "direct",
+      "createdAt": "2026-02-09 14:49:06.265+00",
+      "updatedAt": "2026-02-09 14:49:06.636674+00",
+      "archivedAt": "2026-09-30 19:29:28.623+00"
+    },
+    {
+      "id": "019c3dcc-11d3-7739-841e-db79ba4bf808",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-08 15:17:08.371+00",
+      "updatedAt": "2026-02-08 15:31:27.915168+00",
+      "archivedAt": "2026-09-30 20:30:34.167+00"
+    },
+    {
+      "id": "019c3d01-0d38-7059-9697-8f61338fec7a",
+      "type": "evaluation",
+      "title": "Narrate. From the beginning of times there was a dynasty. They didn't war. They married. Heroes, con",
+      "mode": "direct",
+      "createdAt": "2026-02-08 11:27:21.324+00",
+      "updatedAt": "2026-02-08 11:27:21.750722+00",
+      "archivedAt": "2026-09-30 19:27:53.541+00"
+    },
+    {
+      "id": "019c3cbe-6fa1-7ada-a313-ca60a955a6e5",
+      "type": "evaluation",
+      "title": "Narrate. From the beginning of times there was a dynasty. They didn't war. They married. Heroes, con",
+      "mode": "direct",
+      "createdAt": "2026-02-08 10:31:34.173+00",
+      "updatedAt": "2026-02-08 10:44:23.784608+00",
+      "archivedAt": "2026-09-30 20:30:14.728+00"
+    },
+    {
+      "id": "019c3c73-4e05-7dc9-ad36-c27cefdbde8e",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-08 08:52:47.29+00",
+      "updatedAt": "2026-02-08 08:52:47.7506+00",
+      "archivedAt": "2026-09-30 19:27:57.071+00"
+    },
+    {
+      "id": "019c3971-cfe2-74ce-b612-5b0b9d5698de",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-07 18:51:43.865+00",
+      "updatedAt": "2026-02-07 18:51:44.281889+00",
+      "archivedAt": "2026-09-30 20:30:11.944+00"
+    },
+    {
+      "id": "019c3959-bca9-7575-8eb7-662a871e5435",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-07 18:25:25.725+00",
+      "updatedAt": "2026-02-07 18:25:26.235339+00",
+      "archivedAt": "2026-09-30 19:56:20.515+00"
+    },
+    {
+      "id": "019c394d-bb52-7d5e-8d09-dbb475d1735a",
+      "type": "evaluation",
+      "title": "ck2 and ck3 gamers' most lovable traits",
+      "mode": "direct",
+      "createdAt": "2026-02-07 18:12:37.4+00",
+      "updatedAt": "2026-02-07 18:14:20.673707+00",
+      "archivedAt": "2026-09-30 19:27:05.895+00"
+    },
+    {
+      "id": "019c393c-1a26-7b77-a64b-58fad44de86a",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-07 17:53:13.668+00",
+      "updatedAt": "2026-02-07 17:53:14.073394+00",
+      "archivedAt": "2026-09-30 19:26:41.154+00"
+    },
+    {
+      "id": "019c392c-2719-72fe-ae8c-23af81a0add3",
+      "type": "evaluation",
+      "title": "check for punctuation\n\nNarrate. World's pov seeing one peculiar rising dynasty arranging marriages a",
+      "mode": "direct",
+      "createdAt": "2026-02-07 17:49:54.593+00",
+      "updatedAt": "2026-02-07 17:49:55.059878+00",
+      "archivedAt": "2026-09-30 19:56:24.428+00"
+    },
+    {
+      "id": "019c38b8-bfd1-7c3b-94c4-7b9f91312027",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-07 16:27:56.654+00",
+      "updatedAt": "2026-02-07 16:27:57.231341+00",
+      "archivedAt": "2026-09-30 19:27:17.289+00"
+    },
+    {
+      "id": "019c38af-ca53-7102-99b0-e279e99250d9",
+      "type": "evaluation",
+      "title": "Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all around the globe. Th",
+      "mode": "direct",
+      "createdAt": "2026-02-07 15:19:41.93+00",
+      "updatedAt": "2026-02-07 15:19:42.647443+00",
+      "archivedAt": "2026-09-30 20:30:09.85+00"
+    },
+    {
+      "id": "019c3878-33c1-7310-87f8-770bc6bdbf64",
+      "type": "evaluation",
+      "title": "check this text. can it be rephrased or reorganised to be more clean, but without losing details? wi",
+      "mode": "direct",
+      "createdAt": "2026-02-07 14:20:06.789+00",
+      "updatedAt": "2026-02-07 14:20:08.20769+00",
+      "archivedAt": "2026-09-30 19:27:24.629+00"
+    },
+    {
+      "id": "019c3871-acf4-76f1-bcc9-ff66a6f21d16",
+      "type": "evaluation",
+      "title": "check this text. can it be rephrased or reorganised to be more clean, but without losing details?\n\nN",
+      "mode": "direct",
+      "createdAt": "2026-02-07 14:13:15.722+00",
+      "updatedAt": "2026-02-07 14:13:16.116042+00",
+      "archivedAt": "2026-09-30 19:27:35.696+00"
+    },
+    {
+      "id": "019c3727-e1fe-7b9a-8a7b-bfe96f1f2154",
+      "type": "evaluation",
+      "title": "\"Narrate. World's pov seeing one peculiar rising dynasty arranging marriages all arond the globe. Wi",
+      "mode": "direct",
+      "createdAt": "2026-02-07 08:14:51.585+00",
+      "updatedAt": "2026-02-07 08:14:51.938646+00",
+      "archivedAt": "2026-09-30 19:56:29.072+00"
+    },
+    {
+      "id": "019c36d0-8ff6-7870-bda5-6a4fd7309985",
+      "type": "evaluation",
+      "title": "\"eugenicl programs\", \"bene gesserit\", \"ck2 player hunting for bloodlines\". is there similar things i",
+      "mode": "direct",
+      "createdAt": "2026-02-07 06:36:17.615+00",
+      "updatedAt": "2026-02-07 06:36:17.954691+00",
+      "archivedAt": "2026-09-30 19:27:43.06+00"
+    },
+    {
+      "id": "019bb83f-5a99-7691-8d99-07428106ed1d",
+      "type": "evaluation",
+      "title": "Is it possible to make mobile browser online (kinda) game, but only for myself (for example, with bo",
+      "mode": "direct",
+      "createdAt": "2026-01-13 16:47:16.643+00",
+      "updatedAt": "2026-01-13 16:47:16.910331+00",
+      "archivedAt": "2026-09-30 20:30:01.445+00"
+    },
+    {
+      "id": "019bace4-a4c4-7bbc-9580-6bc0932cf76d",
+      "type": "evaluation",
+      "title": "look at this. suggest at better composition of characters (order of things inside char list)\n\n33350 ",
+      "mode": "direct",
+      "createdAt": "2026-01-11 11:50:32.351+00",
+      "updatedAt": "2026-01-11 11:50:32.862641+00",
+      "archivedAt": "2026-09-30 20:29:58.666+00"
+    },
+    {
+      "id": "019bacda-11f7-788f-9f0f-5f56f1472089",
+      "type": "evaluation",
+      "title": "look at this. suggest at better composition of characters\n\n33350 = {\n\tname = \"Athelstan\"\n\tdynasty = ",
+      "mode": "direct",
+      "createdAt": "2026-01-11 11:49:17.047+00",
+      "updatedAt": "2026-01-11 11:49:17.352694+00",
+      "archivedAt": "2026-09-30 19:25:42.494+00"
+    },
+    {
+      "id": "019b924c-935c-78b4-a668-8a25bb459250",
+      "type": "evaluation",
+      "title": "just look at these traits. which are useless?\n\nbrawny = {\n\tmartial = 2\n\tdiplomacy = 1\n\thealth = 1\n\tc",
+      "mode": "direct",
+      "createdAt": "2026-01-06 07:54:28.806+00",
+      "updatedAt": "2026-01-06 07:58:22.819083+00",
+      "archivedAt": "2026-09-30 19:56:17.431+00"
+    },
+    {
+      "id": "019b8f20-5702-74e4-ba9c-3cc05af91793",
+      "type": "evaluation",
+      "title": "just look at these traits\n\nbrawny = {\n\tmartial = 2\n\tdiplomacy = 1\n\thealth = 1\n\tcombat_rating = 10\n\ts",
+      "mode": "direct",
+      "createdAt": "2026-01-05 17:08:34.833+00",
+      "updatedAt": "2026-01-05 17:35:34.519254+00",
+      "archivedAt": "2026-09-30 19:25:47.011+00"
+    },
+    {
+      "id": "019b7f12-1901-709f-9dd5-fdf1aef4a4f3",
+      "type": "evaluation",
+      "title": "leave only important info about traits\n\n# THE SEVEN SINS\nenvious = {\n\tpersonality = yes\n\tvice = yes\n",
+      "mode": "direct",
+      "createdAt": "2026-01-02 14:39:34.812+00",
+      "updatedAt": "2026-01-05 13:58:19.542219+00",
+      "archivedAt": "2026-09-30 19:56:13.111+00"
+    },
+    {
+      "id": "019b8955-ac1b-72c6-b80a-4e7adfd02508",
+      "type": "evaluation",
+      "title": "Look at this. Here are the attribute calculations.\n\n**The Universal Base:**\nEvery character starts w",
+      "mode": "direct",
+      "createdAt": "2026-01-04 14:08:03.712+00",
+      "updatedAt": "2026-01-04 19:23:10.071244+00",
+      "archivedAt": "2026-09-30 19:25:56.2+00"
+    },
+    {
+      "id": "0199f81e-c2e3-77a7-b24e-741526e6698f",
+      "type": "evaluation",
+      "title": "############ # EDUCATION ############ # INTRIGUE OUTCOMES amateurish_plotter = { education = yes",
+      "mode": "direct",
+      "createdAt": "2025-10-18 16:27:27.229+00",
+      "updatedAt": "2026-01-02 13:42:04.716182+00",
+      "archivedAt": "2026-09-30 19:19:51.386+00"
+    },
+    {
+      "id": "019b755c-4bf6-7dcf-a84f-bcb489c5f3fa",
+      "type": "evaluation",
+      "title": "leave only traits with \"personality = yes\". and leave only their effects on attributes.\n\n# THE SEVEN",
+      "mode": "direct",
+      "createdAt": "2025-12-31 17:03:08.298+00",
+      "updatedAt": "2025-12-31 17:07:15.4072+00",
+      "archivedAt": "2026-09-30 19:26:02.596+00"
+    },
+    {
+      "id": "019b749b-c9cb-7742-b553-7fd37b4d896e",
+      "type": "evaluation",
+      "title": "я буду давать списки трейтов из игры CK2, а ты должен выбирать только те которые влияют на характери",
+      "mode": "direct",
+      "createdAt": "2025-12-31 13:33:38.665+00",
+      "updatedAt": "2025-12-31 14:33:22.997404+00",
+      "archivedAt": "2026-09-30 19:26:09.689+00"
+    },
+    {
+      "id": "019b73e1-eb77-7f19-9335-19ee61e608e8",
+      "type": "evaluation",
+      "title": "in ck2 i want a build of independent ruler that would be perfect for a newcomer, but not too overpow",
+      "mode": "direct",
+      "createdAt": "2025-12-31 10:11:35.508+00",
+      "updatedAt": "2025-12-31 10:11:35.845374+00",
+      "archivedAt": "2026-09-30 19:26:17.531+00"
+    },
+    {
+      "id": "019b7373-f89f-7fd0-b8eb-7c68b8c27538",
+      "type": "evaluation",
+      "title": "leave only traits with \"personality = yes\". remove insults and compliments\n# THE SEVEN SINS\nenvious ",
+      "mode": "direct",
+      "createdAt": "2025-12-31 08:10:00.603+00",
+      "updatedAt": "2025-12-31 09:19:39.136792+00",
+      "archivedAt": "2026-09-30 19:26:30.155+00"
+    },
+    {
+      "id": "019af986-d007-7fa9-a3c9-3d6a39b0c03b",
+      "type": "evaluation",
+      "title": "Представим что я запустил машину времени и попал в триасовый период. Что я увижу? И что станет со мн",
+      "mode": "direct",
+      "createdAt": "2025-12-07 15:56:42.827+00",
+      "updatedAt": "2025-12-07 16:43:06.494121+00",
+      "archivedAt": "2026-09-30 19:25:35.666+00"
+    },
+    {
+      "id": "019af980-43ae-7425-8a1d-7e8cc630d9d1",
+      "type": "evaluation",
+      "title": "Ролеплей. Я попаданец в прошлое. Когда я проснулся, я очеулся 8 летним мальчиком, сыном барона",
+      "mode": "direct",
+      "createdAt": "2025-12-07 15:51:41.095+00",
+      "updatedAt": "2025-12-07 15:54:43.886597+00",
+      "archivedAt": "2026-09-30 19:25:32.28+00"
+    },
+    {
+      "id": "019af8de-9e53-7857-a62e-8d8a950163af",
+      "type": "evaluation",
+      "title": "Возможен ли такой сюжет для альтернативно историчесуого фанфика с попаданцем? Время жизни Карла Вели",
+      "mode": "direct",
+      "createdAt": "2025-12-07 13:02:17.746+00",
+      "updatedAt": "2025-12-07 13:02:18.22274+00",
+      "archivedAt": "2026-09-30 19:19:22.862+00"
+    },
+    {
+      "id": "019a96ef-971d-7b01-a2e4-af4281112553",
+      "type": "evaluation",
+      "title": "Я хочу сыграть роль попаданца в Пираты Карибского моря",
+      "mode": "direct",
+      "createdAt": "2025-11-18 12:29:26.919+00",
+      "updatedAt": "2025-11-18 12:29:27.351074+00",
+      "archivedAt": "2026-09-30 19:18:45.144+00"
+    },
+    {
+      "id": "019a17f0-2e87-7f49-8f8b-934c04d0b77b",
+      "type": "evaluation",
+      "title": "CK2 roleplay. Not a ruler yet. Son of Baron-Burgher (or whatever it's called in the land I'll choose",
+      "mode": "direct",
+      "createdAt": "2025-10-24 20:36:57.692+00",
+      "updatedAt": "2025-10-24 20:37:03.710211+00",
+      "archivedAt": "2026-09-30 19:18:50.45+00"
+    },
+    {
+      "id": "019a17c3-b06b-7462-8a36-3f3896ed5011",
+      "type": "evaluation",
+      "title": "RolePlay \"That Time I Got Reincarnated as Unemployed Villager in Cubical Fantasy World\"",
+      "mode": "direct",
+      "createdAt": "2025-10-24 19:49:14.988+00",
+      "updatedAt": "2025-10-24 19:53:04.376969+00",
+      "archivedAt": "2026-09-30 19:18:54.227+00"
+    },
+    {
+      "id": "fb467df9-6bfa-4bf7-9e76-8f421520c975",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want Harry Potter simulator",
+      "mode": "direct",
+      "createdAt": "2025-09-14 08:17:00.26+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:56.225+00"
+    },
+    {
+      "id": "e57566ee-9655-438d-af98-f6f57d12f9e7",
+      "type": "evaluation",
+      "title": "So, what I want. Imagine a usual citizen of Roman Empire. But he has a mentality and thinking proces",
+      "mode": "direct",
+      "createdAt": "2025-08-27 19:59:01.011+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:19:03.578+00"
+    },
+    {
+      "id": "d1739035-9a7e-43b8-a0af-fc8681ee8d76",
+      "type": "evaluation",
+      "title": "Example of dialogue between peasant and knight in style of \"Monty Python and Holy Grail\"",
+      "mode": "direct",
+      "createdAt": "2025-08-26 08:35:24.733+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:19:08.022+00"
+    },
+    {
+      "id": "c8491bd9-a8c1-43ff-af79-c80427ffc10c",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want a simulator of Minecraft",
+      "mode": "direct",
+      "createdAt": "2025-09-01 11:34:17.132+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:19:14.84+00"
+    },
+    {
+      "id": "c79cb5c2-053d-4ecc-9130-7cc1c4d9906a",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want a peasant simulator. Everyone must talk in medievalish style (like in \"Monty ",
+      "mode": "direct",
+      "createdAt": "2025-08-26 14:16:41.893+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:19:28.702+00"
+    },
+    {
+      "id": "c2db0a4f-b4cf-4e6b-b28a-1925be670b9a",
+      "type": "evaluation",
+      "title": "Is it possible to make mobile browser online (or offline) game, but only for myself (for example, wi",
+      "mode": "direct",
+      "createdAt": "2025-07-10 10:19:06.322+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:09.189+00"
+    },
+    {
+      "id": "bb9de0af-b584-4b3d-ba06-e117a9e8ac13",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want Zomboid simulator",
+      "mode": "direct",
+      "createdAt": "2025-09-03 11:23:01.778+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:13.398+00"
+    },
+    {
+      "id": "b5dd90c0-0c11-4b06-98a4-dd5c09a6f491",
+      "type": "evaluation",
+      "title": "Do you know game Oregon trail?",
+      "mode": "direct",
+      "createdAt": "2025-09-01 12:24:53.052+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:15.515+00"
+    },
+    {
+      "id": "9fd48bc6-a75b-4578-8896-0f8029088b28",
+      "type": "evaluation",
+      "title": "Can you describe scene - typical middle-aged mom preparing for sleep",
+      "mode": "direct",
+      "createdAt": "2025-08-29 18:48:27.165+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:21.211+00"
+    },
+    {
+      "id": "90438a87-7b6a-405f-ac64-54d35adaf596",
+      "type": "evaluation",
+      "title": "Concept of drone that would help with everything in case of surviving on different planet. Like in r",
+      "mode": "direct",
+      "createdAt": "2025-09-02 11:24:54.655+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:23.074+00"
+    },
+    {
+      "id": "847e20ec-ecb0-4487-9160-8ed1634e1164",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want Rimworld simulator",
+      "mode": "direct",
+      "createdAt": "2025-09-01 13:22:56.422+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:29.037+00"
+    },
+    {
+      "id": "71d231d3-b3d5-4758-a1e5-86b5b3325cdb",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want a simulator of Minecraft. My actions shouldn't take much time, so the day don",
+      "mode": "direct",
+      "createdAt": "2025-09-02 11:33:50.053+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:18:07.383+00"
+    },
+    {
+      "id": "57b8fdfb-2bda-4bbf-ab51-9804fcdf7dae",
+      "type": "evaluation",
+      "title": "North Korea mode in CK2. What do you know?",
+      "mode": "direct",
+      "createdAt": "2025-08-14 13:40:12.779+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:12:35.771+00"
+    },
+    {
+      "id": "404b7d8a-5ab3-4bac-b1bb-ce0be6b0dd45",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want a simulator of zombie apocalypse survival. Epidemy starts in single city (lik",
+      "mode": "direct",
+      "createdAt": "2025-08-31 20:33:17.266+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:10:26.223+00"
+    },
+    {
+      "id": "28f89b00-4085-4a59-a773-eda232ccc66d",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want Harry Potter LitRPG",
+      "mode": "direct",
+      "createdAt": "2025-09-14 08:23:05.516+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:10:15.256+00"
+    },
+    {
+      "id": "1acf133b-4138-46d9-bce3-d0b97ce0b3ee",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want a peasant simulator with LitRPG elements",
+      "mode": "direct",
+      "createdAt": "2025-09-03 11:50:04.586+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:10:09.1+00"
+    },
+    {
+      "id": "1259f481-6ff8-4967-863d-e5e9707926ca",
+      "type": "evaluation",
+      "title": "I have an idea of a tool, and probably someone already gave it a name. Something you give raw materi",
+      "mode": "direct",
+      "createdAt": "2025-09-01 19:30:32.154+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:10:06.244+00"
+    },
+    {
+      "id": "111ea896-aba6-445a-88f5-a50a1ed57430",
+      "type": "evaluation",
+      "title": "Let's roleplay. I want ant colony simulator",
+      "mode": "direct",
+      "createdAt": "2025-08-23 20:02:33.704+00",
+      "updatedAt": "2025-10-17 07:53:40.806289+00",
+      "archivedAt": "2026-09-30 19:10:01.035+00"
+    },
+    {
+      "id": "858e2082-81d4-4d75-9cd7-7067165cb01d",
+      "type": "evaluation",
+      "title": "alt-history - Harold Godwinson wasnt shot and won against Harald Hardrada and William the Bastard",
+      "mode": "direct",
+      "createdAt": "2025-09-29 16:04:42.931+00",
+      "updatedAt": "2025-09-29 16:04:43.190135+00",
+      "archivedAt": "2026-09-30 19:09:54.869+00"
+    },
+    {
+      "id": "daf13aac-6db8-4c16-a7a1-be0c32b058c0",
+      "type": "evaluation",
+      "title": "## Character Creation\n\n### Gender Bonuses\n**Base Stats:**\nStrength 5 | Agility 5 | Intelligence 4 | ",
+      "mode": "direct",
+      "createdAt": "2025-08-22 18:54:25.841+00",
+      "updatedAt": "2025-08-22 18:56:38.816248+00",
+      "archivedAt": "2026-09-30 19:09:32.775+00"
+    }
+  ]
+}
