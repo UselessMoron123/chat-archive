@@ -96,9 +96,9 @@
     attachment_warning_txt:
       "Attachments: files are not downloaded; included links may expire or require an active Arena session.",
     tool_output_warning:
-      "Tool outputs are preserved as recorded; the exporter does not re-run tools or retrieve omitted fetch_page chunks/read_file ranges.",
+      "Tool outputs are preserved as recorded; the exporter does not re-run tools or retrieve omitted fetch_page chunks/read_file ranges or unavailable image bytes.",
     tool_output_warning_txt:
-      "Tool outputs are preserved as recorded; omitted fetch_page chunks/read_file lines are not retrieved again.",
+      "Tool outputs are preserved as recorded; omitted fetch_page chunks/read_file lines and unavailable image bytes are not retrieved again.",
   };
 
   function t(key, vars) {
@@ -1348,6 +1348,17 @@
               `[notice: fetch_page response has more content${chunkLabel}; this exporter does not retrieve missing chunks]`
             );
           }
+        }
+
+        if (
+          sourceToolName === "read_file" &&
+          String(output.kind || "").toLowerCase() === "image" &&
+          !output.content &&
+          !output.data
+        ) {
+          lines.push(
+            "[notice: read_file returned image metadata only; image bytes are not included in this tool response]"
+          );
         }
 
         if (sourceToolName === "read_file") {
