@@ -29,7 +29,7 @@ arena.ai, нажать **Export**, выбрать Scope, дальше либо `
 ```
 python3 tools/audit_export.py --zips "<папка с новыми ZIP>" --list "<сохранённый список>.json"
 python3 tools/audit_export.py --zips "<новая партия>" --baseline "latest try_json"
-node tests/exporter.test.mjs                      # 40 проверок для 2.4.0
+node tests/exporter.test.mjs                      # 53 проверки для 2.4.0
 node tests/bench-batch.mjs --chats 48 --latency 700   # замер скорости
 ```
 

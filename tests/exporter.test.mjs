@@ -72,7 +72,7 @@ function textResponse(text) {
 // ---------------------------------------------------------------------------
 // harness: fake arena.ai page with a fake API and real ZIP downloads
 // ---------------------------------------------------------------------------
-function createHarness({ entriesForCursor, evaluationFor, delayMs = 0, onRequest }) {
+function createHarness({ entriesForCursor, evaluationFor, delayMs = 0, onRequest, agentHtmlFor }) {
   const dom = new JSDOM(`<!doctype html><html><head></head><body><div id="app">arena</div></body></html>`, {
     url: "https://arena.ai/search",
     runScripts: "outside-only",
@@ -108,7 +108,8 @@ function createHarness({ entriesForCursor, evaluationFor, delayMs = 0, onRequest
         return jsonResponse(record);
       }
       if (parsed.pathname.startsWith("/agent/") || parsed.pathname.startsWith("/c/")) {
-        return textResponse("<html><body>no flight payload</body></html>");
+        const html = agentHtmlFor ? agentHtmlFor(parsed.pathname.split("/").pop()) : null;
+        return textResponse(html || "<html><body>no flight payload</body></html>");
       }
       throw new Error(`unexpected fetch ${href}`);
     } finally {
@@ -524,6 +525,87 @@ async function suiteLargePayload() {
 }
 
 // ---------------------------------------------------------------------------
+// suite 3c — Agent Mode chats: HTML -> Next.js flight -> JSON/TXT
+// ---------------------------------------------------------------------------
+function agentPageHtml(id, { title = "Agent flight chat", token = "secret-token" } = {}) {
+  const flight = [
+    `3:{"session":{"id":"${id}","title":"${title}","publicAccessToken":"${token}",`,
+    `"createdAt":"2026-09-25T08:00:00.000Z","updatedAt":"2026-09-25T09:00:00.000Z"},"messages":[`,
+    `{"id":"m1","role":"user","createdAt":"2026-09-25T08:00:00.000Z","parts":[{"type":"text","text":"hello agent"}]},`,
+    `{"id":"m2","role":"assistant","createdAt":"2026-09-25T08:00:05.000Z","parts":[`,
+    `{"type":"text","text":"running a command for you"},`,
+    `{"type":"tool-bash","toolCallId":"call-1","input":{"command":"ls -la"},`,
+    `"output":{"stdout":"file.txt","exit_code":0}}]}]}`,
+  ].join("");
+  return `<html><body><script>self.__next_f.push([1, ${JSON.stringify(flight)}])</script></body></html>`;
+}
+
+async function suiteAgentChats() {
+  console.log("\n# suite: Agent Mode chats (HTML scraping path)");
+  const legacyPath = path.join(ROOT, "Arena.ai - LMSYS Arena Chat Exporter-2.3.2.user.js");
+  const legacySource = IS_24 && fs.existsSync(legacyPath) ? fs.readFileSync(legacyPath, "utf8") : null;
+  const html = agentPageHtml(AGENT_A);
+
+  async function capture(scriptSource, format) {
+    const harness = createHarness({
+      entriesForCursor: () => ({ entries: [], pagination: { hasMore: false, cursor: null, limit: 50 } }),
+      evaluationFor: () => null,
+      agentHtmlFor: () => html,
+    });
+    await mountScript(harness.window, scriptSource);
+    await harness.window.__arenaChatExport(AGENT_A, format, "agentic");
+    return readTextDownload(harness.downloads[harness.downloads.length - 1]);
+  }
+
+  const jsonText = await capture(source, "json");
+  const record = JSON.parse(jsonText);
+  check("agent record is recognised as agentic", record.recordType === "agentic" && record.agent?.type === "agentic", record.recordType);
+  check("flight payload is parsed into messages", record.agent?.messages?.length === 2, String(record.agent?.messages?.length));
+  check("session title is taken from the flight data", record.agent?.session?.title === "Agent flight chat", String(record.agent?.session?.title));
+  check("publicAccessToken is stripped", !("publicAccessToken" in (record.agent?.session || {})), JSON.stringify(record.agent?.session));
+  check("token removal is marked", record.agent?.session?.publicAccessTokenRedacted === true);
+
+  const txt = await capture(source, "txt");
+  check("agent TXT keeps the message text", txt.includes("running a command for you"));
+  check("agent TXT keeps the tool call and its output", txt.includes("[tool: bash]") && txt.includes("file.txt"), txt.slice(0, 0));
+
+  if (legacySource) {
+    const legacyJson = JSON.parse(await capture(legacySource, "json"));
+    const legacyTxt = await capture(legacySource, "txt");
+    delete legacyJson.exportedAt;
+    delete record.exportedAt;
+    check("agent JSON matches 2.3.2 (shallow copy changes nothing)", JSON.stringify(legacyJson) === JSON.stringify(record));
+    check("agent TXT is byte-identical to 2.3.2", legacyTxt === txt, `${legacyTxt.length} vs ${txt.length} B`);
+  }
+
+  // batch path: the streaming writer must accept an agent record too
+  const harness = createHarness({
+    entriesForCursor: () => ({
+      entries: [{ type: "agentic", id: AGENT_A, title: "Agent flight chat", createdAt: "2026-09-25T08:00:00.000Z", updatedAt: "2026-09-25T09:00:00.000Z", archivedAt: "2026-09-26T10:00:00.000Z" }],
+      pagination: { hasMore: false, cursor: null, limit: 50 },
+    }),
+    evaluationFor: () => null,
+    agentHtmlFor: () => html,
+  });
+  await mountScript(harness.window);
+  const document = harness.window.document;
+  const $ = (sel) => document.querySelector(sel);
+  $('[data-role="fetch-history"]').click();
+  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Loaded 1 conversations"), "agent list");
+  $('[data-role="select-all"]').click();
+  await sleep(10);
+  $('[data-role="export-selected-both"]').click();
+  await waitFor(() => $("#arena-chat-export-status")?.textContent.includes("Batch export finished"), "agent batch");
+  const zip = readZip(harness.downloads[harness.downloads.length - 1]);
+  const names = Object.keys(zip);
+  check("archived agent chat lands in the batch ZIP in both formats", names.filter((n) => n.endsWith(".json") && n !== "manifest.json").length === 1 && names.filter((n) => n.endsWith(".txt")).length === 1, JSON.stringify(names));
+  const batchManifest = JSON.parse(zip["manifest.json"]);
+  check("manifest marks the agent chat as archived and agentic", batchManifest.archivedCount === 1 && batchManifest.successfulExports[0].recordType === "agentic", JSON.stringify(batchManifest.successfulExports[0]));
+  check("batch agent JSON carries the archive date", /"archivedAt": "2026-09-26T10:00:00.000Z"/.test(zip[names.find((n) => n.endsWith(".json") && n !== "manifest.json")]));
+  check("batch agent JSON has no token either", !zip[names.find((n) => n.endsWith(".json") && n !== "manifest.json")].includes("secret-token"));
+}
+
+// ---------------------------------------------------------------------------
 // suite 4 — format parity: the newest build must emit byte-identical payloads
 // to the shipped 2.3.2 for the same conversation (volatile fields aside).
 // ---------------------------------------------------------------------------
@@ -623,6 +705,7 @@ if (IS_24) {
   await suiteResilience();
   await suiteExportEverything();
   await suiteLargePayload();
+  await suiteAgentChats();
   await suiteFormatParity();
 } else {
   console.log("\n# skipping 2.4-specific suites (parallel batching, retries, export everything)");
