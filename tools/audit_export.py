@@ -23,6 +23,11 @@ Examples
     # JSON batches work the same way (id comes from the record, not the header)
     python3 tools/audit_export.py --zips "check this out/export attempt"
 
+    # some chats were left out on purpose (id or a title fragment)
+    python3 tools/audit_export.py --zips "more latest" \
+        --list "more latest/arena-chat-list-all-2026-10-03T20-05-43-199Z.json" \
+        --allow-missing 019c394d "кубикус"
+
 Exit code is 1 when a regression, a missing chat or a failed export is found,
 so the script can be used in a loop or a pre-backup check.
 """
@@ -287,6 +292,14 @@ def main() -> int:
     parser.add_argument("--list", help="a saved arena-chat-list-*.json (or a previous manifest.json) to check coverage against")
     parser.add_argument("--baseline", nargs="*", default=[], help="older ZIP batches to compare against (each chat must not shrink)")
     parser.add_argument("--quiet", action="store_true", help="only print problems and the summary")
+    parser.add_argument(
+        "--allow-missing",
+        nargs="+",
+        default=[],
+        metavar="ID_OR_TITLE_PART",
+        help="chats deliberately left out of this batch (ids or title fragments); "
+        "they are reported as skipped instead of counting as problems",
+    )
     args = parser.parse_args()
 
     zip_paths = iter_zip_paths(args.zips)
@@ -365,8 +378,23 @@ def main() -> int:
             cid for cid, meta in expected.items()
             if cid in all_chats and bool(meta.get("archivedAt")) != bool(all_chats[cid][0].archived_at)
         ]
+        allowed = [str(item).strip().lower() for item in args.allow_missing if str(item).strip()]
+        skipped_on_request = [
+            cid
+            for cid in missing
+            if any(
+                token == cid
+                or token in cid
+                or token in str(expected[cid].get("title") or "").lower()
+                for token in allowed
+            )
+        ]
+        missing = [cid for cid in missing if cid not in skipped_on_request]
         print(f"#   missing from the export: {len(missing)} | not in the saved list: {len(extra)} "
-              f"| archive-flag mismatches: {len(flag_mismatch)}")
+              f"| archive-flag mismatches: {len(flag_mismatch)}"
+              + (f" | skipped on request: {len(skipped_on_request)}" if skipped_on_request else ""))
+        for cid in skipped_on_request:
+            print(f"      SKIPPED {cid} | {(expected[cid].get('title') or '')[:70]} (allowed by --allow-missing)")
         for cid in missing[:20]:
             print(f"      MISSING {cid} | {(expected[cid].get('title') or '')[:70]}")
         for cid in extra[:20]:
