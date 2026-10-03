@@ -1,0 +1,45 @@
+# GitHub Actions CI for this repository.
+#
+# The Arena GitHub App is not allowed to write files under .github/workflows/,
+# so this file is kept here as the source of truth. To enable CI, copy it to
+# .github/workflows/ci.yml (GitHub web UI: "Add file" → "Create new file",
+# then paste this content) — or run the same checks locally with
+# `bash tools/ci.sh`.
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  exporter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Every userscript parses
+        run: |
+          for file in *Exporter-*.user.js; do
+            echo "node --check $file"
+            node --check "$file"
+          done
+
+      - name: Committed userscript matches the template
+        run: node tools/build-version.mjs --check
+
+      - name: Tests — newest exporter
+        run: node tests/exporter.test.mjs
+
+      - name: Tests — shipped 2.3.2 fallback
+        run: node tests/exporter.test.mjs "Arena.ai - LMSYS Arena Chat Exporter-2.3.2.user.js"
+
+      - name: Audit tool compiles
+        run: python3 -m py_compile tools/audit_export.py
