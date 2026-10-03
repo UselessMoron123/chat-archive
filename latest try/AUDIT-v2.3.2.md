@@ -51,14 +51,20 @@ v2.3.1 — 15:22/15:23) и с сохранённым списком `arena-chat-
 ## Как воспроизвести проверку
 
 ```bash
-# распаковать все ZIP-ы в отдельные папки и сравнить с базовыми
-unzip -o -q "latest try/*.zip" -d /tmp/new
-python3 - <<'PY'
-import glob, re, json
-# id беседы = UUID из строки URL в шапке TXT
-...
-PY
+# покрытие против сохранённого списка + сравнение с предыдущей выгрузкой
+python3 tools/audit_export.py \
+    --zips "latest try" \
+    --list "latest try/arena-chat-list-all-2026-10-03T16-39-49-640Z.json" \
+    --baseline arena-chat-export-txt-2026-10-03T15-23-15-756Z.zip
 ```
 
-Скрипты аудита: `/tmp/audit/audit.py`, `/tmp/audit/integrity.py` (рабочая копия сессии;
-при необходимости переносятся в репозиторий).
+Скрипт читает TXT/JSON прямо из ZIP, сам сверяет id со списком, ловит повторные
+выгрузки и регрессии; код возврата 1, если что-то найдено.
+
+```bash
+python3 tools/audit_export.py --zips "latest try" --list "<list.json>"
+python3 tools/audit_export.py --zips "check this out/export attempt"       # смешанный JSON+TXT
+```
+
+Ожидаемый вывод для текущего набора: `unique conversations: 244`, `missing from the export: 0`,
+`regressions: 0`, `result: OK`.

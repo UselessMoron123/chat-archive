@@ -1,0 +1,11 @@
+{
+  "name": "arena-chat-archive",
+  "private": true,
+  "description": "Arena.ai chat archive: exporter userscript, jsdom tests and audit tooling",
+  "scripts": {
+    "test": "node tests/exporter.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}
